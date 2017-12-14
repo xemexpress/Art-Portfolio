@@ -56,7 +56,7 @@
 {
   "unit": {
     "id": 1,
-    "Image": "image.link",
+    "image": "image.link",
     "text": "Philosophy",
     "createdAt": "2017-08-13T18:40:39.425Z",
     "updatedAt": "2017-08-13T18:40:39.425Z"
