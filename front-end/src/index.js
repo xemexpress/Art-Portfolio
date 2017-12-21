@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <div className='gallery'></div>
         <div className='nav'>
           <div className='artist-name'>YUEN PIK KWAN</div>
