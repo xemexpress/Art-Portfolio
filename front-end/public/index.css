@@ -59,6 +59,8 @@ body {
   background: transparent url("./svg/pattern.svg");
   height: 100px;
   width: 100px;
+  margin-top: -109px;
+  margin-left: 27px;
 }
 
 /* General */
