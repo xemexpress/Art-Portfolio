@@ -6,8 +6,8 @@ class App extends React.Component {
   render() {
     return (
       <div className='container-fluid'>
-        <div className='gallery col-lg-8'></div>
-        <div className='nav col-lg-4'>
+        <div className='gallery col-lg-8 col-md-7'></div>
+        <div className='nav col-lg-4 col-md-5'>
           <div className='artist-name'>YUEN PIK KWAN</div>
           <div className='artist-title'>Metal Maker & Multimedia Designer</div>
           <ul className='navbar'>
