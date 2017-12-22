@@ -5,9 +5,9 @@ import registerServiceWorker from './registerServiceWorker';
 class App extends React.Component {
   render() {
     return (
-      <div className='container'>
-        <div className='gallery'></div>
-        <div className='nav'>
+      <div className='container-fluid'>
+        <div className='gallery col-lg-8'></div>
+        <div className='nav col-lg-4'>
           <div className='artist-name'>YUEN PIK KWAN</div>
           <div className='artist-title'>Metal Maker & Multimedia Designer</div>
           <ul className='navbar'>

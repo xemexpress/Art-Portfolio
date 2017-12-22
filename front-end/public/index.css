@@ -9,13 +9,11 @@ body {
   float: left;
   height: 700px;
   width: 880px;
-  /* height: 100%; */
-  /* width: 60%; */
   background: #FFF url("./svg/grid.svg");
 }
 
 .nav {
-  position: fixed;
+  position: fixed !important;
   right: 60px;
   top: 187px;
 }
@@ -67,10 +65,7 @@ body {
 
 /* Layout */
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  margin-right: auto; }
   @media (min-width: 544px) {
     .container {
       max-width: 576px; } 
@@ -90,10 +85,7 @@ body {
     }
 
 .container-fluid {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
+  margin-right: auto;}
 
 .row {
   display: flex;
