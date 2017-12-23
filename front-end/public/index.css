@@ -10,6 +10,9 @@ body {
   height: 700px;
   width: 880px;
   background: #FFF url("./svg/grid.svg");
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav {
