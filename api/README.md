@@ -146,13 +146,13 @@ No authentication required, returns a [User](#users-for-authentication)
 
 Required fields: `username`, `password`
 
-### Get Current User
+### Get Current User (Admin.)
 
 `GET /api/user`
 
 Authentication required, returns a [User](#users-for-authentication) that's the current user
 
-### Update User
+### Update User (Admin.)
 
 `PUT /api/user`
 
