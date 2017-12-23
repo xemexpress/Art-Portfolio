@@ -167,7 +167,7 @@ Example request body:
 
 Authentication required, returns the [User](#users-for-authentication)
 
-Optional fields: `password`
+Optional field: `password`
 
 ### List Projects
 
