@@ -27,28 +27,32 @@ class App extends React.Component {
     
     return (
       <div className='container-fluid'>
-        <Gallery />
-        <div className='nav col-lg-4 col-md-5'>
-          <div className='artist-name'>YUEN PIK KWAN</div>
-          <div className='artist-title'>Metal Maker & Multimedia Designer</div>
-          <ul className='navbar'>
-            <li className='nav-item'>
-              <a>Blog</a>
-            </li>
-            <li className='nav-item'>
-              <a>Crafts</a>
-            </li>
-            <li className='nav-item'>
-              <a>Design</a>
-            </li>
-            <li className='nav-item'>
-              <a>About</a>
-            </li>
-            <li className='nav-item'>
-              <a>Contact</a>
-            </li>
-          </ul>
-          <div className='nav-deco'>
+        <div className='row'>
+          <Gallery />
+          <div className='col-lg-4 col-md-5'>
+            <div className='nav'>
+              <div className='artist-name'>YUEN PIK KWAN</div>
+              <div className='artist-title'>Metal Maker & Multimedia Designer</div>
+              <ul className='navbar'>
+                <li className='nav-item'>
+                  <a>Blog</a>
+                </li>
+                <li className='nav-item'>
+                  <a>Crafts</a>
+                </li>
+                <li className='nav-item'>
+                  <a>Design</a>
+                </li>
+                <li className='nav-item'>
+                  <a>About</a>
+                </li>
+                <li className='nav-item'>
+                  <a>Contact</a>
+                </li>
+              </ul>
+              <div className='nav-deco'>
+              </div>
+            </div>
           </div>
         </div>
       </div>
