@@ -9,19 +9,18 @@ class Gallery extends React.Component {
     const images = [
       {
         original: IMG_4543,
-        originalAlt: 'OAlt1',
-        description: 'Some description1'
+        originalAlt: 'OAlt1'
       },
       {
         original: IMG_4543,
-        originalAlt: 'OAlt2',
-        description: 'Some description2'
+        originalAlt: 'OAlt2'
       }
     ]
     return (      
       <div className='col-lg-8 col-md-7'>
         <div className='gallery'>
           <ImageGallery items={images} showThumbnails={false} />
+          <span>abc</span>
         </div>
       </div>
     )
