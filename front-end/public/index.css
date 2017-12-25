@@ -8,7 +8,7 @@ body {
 .gallery {
   float: left;
   height: 700px;
-  width: 880px;
+  width: 100%;
   background: #FFF url("./svg/grid.svg");
   display: flex;
   align-items: center;
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-item:hover {
-  background: #FFF url("./svg/hovering-bar.svg");
+  background: transparent url("./svg/hovering-bar.svg");
   margin-left: -10px;
   padding-left: 10px;
 }
