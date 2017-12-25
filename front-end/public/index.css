@@ -29,11 +29,11 @@ body {
 }
 
 .image-gallery-left-nav::before {
-  margin-left: -100px;
+  margin-left: -1.5em;
 }
 
 .image-gallery-right-nav::before {
-  margin-right: -100px;
+  margin-right: -1.5em;
 }
 
 .description {
