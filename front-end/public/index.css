@@ -1,20 +1,49 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+
+
 /* Specifics */
-.gallery {
+
+/* Gallery Component */
+.gallery-base {
   float: left;
   height: 700px;
   width: 100%;
   background: #FFF url("./svg/grid.svg");
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  position: relative;
 }
 
+.gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-gallery {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-gallery-left-nav::before {
+  margin-left: -100px;
+}
+
+.image-gallery-right-nav::before {
+  margin-right: -100px;
+}
+
+.description {
+  margin-top: 2em;
+  font-size: 0.87em;
+  letter-spacing: 0.07em;
+}
+
+
+/* Nav Component */
 .nav {
   position: fixed !important;
   right: 60px;
@@ -22,7 +51,6 @@ body {
 }
 
 .artist-name {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 2.2em;
   color: #FAE5FF;
   text-shadow: -3px 1px 0px #000, -5px -1px 0px #00DDDD;
@@ -40,7 +68,6 @@ body {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .nav-item {
@@ -63,6 +90,8 @@ body {
   margin-top: -109px;
   margin-left: 27px;
 }
+
+
 
 /* General */
 
