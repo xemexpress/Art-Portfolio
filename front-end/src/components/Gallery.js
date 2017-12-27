@@ -20,7 +20,11 @@ class Gallery extends React.Component {
     return (      
       <div className='gallery-base col-lg-8 col-md-7'>
         <div className='gallery'>
-          <ImageGallery items={images} showThumbnails={false} />
+          <ImageGallery
+            items={images}
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showPlayButton={false} />
           <div className='description'>
             Kate Yuen<br />
             <i>Metal Folding</i>, 2017<br />
