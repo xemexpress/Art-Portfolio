@@ -31,7 +31,9 @@ if(!isProduction){
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 }else{
-  mongoose.connect('mongodb://localhost/art-portfolio');
+  mongoose.connect('mongodb://localhost/art-portfolio', {
+    useMongoClient: true
+  });
   mongoose.set('debug', true);
 }
 
