@@ -37,8 +37,11 @@ if(isProduction){
   mongoose.set('debug', true);
 }
 
-// Model Registration
+// Models
 require('./models/User')
+
+// Middlewares
+require('./config/passport')
 
 // Routes
 app.use(require('./routes'))
