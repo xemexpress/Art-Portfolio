@@ -19,7 +19,7 @@ var auth = {
     secret: secret,
     userProperty: 'payload',
     credentialsRequired: false,
-    getToken: getTOkenFromHeader
+    getToken: getTokenFromHeader
   }),
   admin: 'kate'
 }
