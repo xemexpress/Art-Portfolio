@@ -56,19 +56,14 @@ app.use(function(req, res, next) {
 // error handler
 
 // development mode: reveal errors to developers
-if(!isProduction){
-  
-}
-
 app.use(function(err, req, res, next){
   console.log(err.stack)
 
   res.status(err.status || 500)
-
-  // no stacktrace leaked to user
+  // no stacktrace leaked to user if in production mode.
   res.json({
-    'errors': {
-      'message': err.message,
+    errors: {
+      message: err.message,
       error: isProduction ? {} : err
     }
   })
