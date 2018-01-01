@@ -49,4 +49,19 @@ router.get('/user', auth.required, function(req, res, next){
   }).catch(next)
 })
 
+// Admin Update
+router.put('/user', auth.required, function(req, res,next){
+  User.findById(req.payload.id).then(function(user){
+    if(!user){ return res.sendStatus(401) }
+
+    if(typeof req.payload.password !== 'undefined'){
+      user.setPassword(req.payload.password)
+    }
+
+    user.save().then(function(){
+      return res.json({ user: user.toAuthJSON() })
+    })
+  }).catch(next)
+})
+
 module.exports = router
