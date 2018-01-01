@@ -31,25 +31,6 @@
 }
 ```
 
-### Multiple Collections
-
-```JSON
-{
-  "collections":[{
-    "slug": "the-sea-of-palaces",
-    "title": "The Sea of Palaces",
-    "createdAt": "2017-08-14T00:10:59.720Z",
-    "updatedAt": "2017-08-14T00:10:59.720Z"
-  }, {
-    "slug": "connect-points",
-    "title": "Connect Points",
-    "createdAt": "2017-08-13T18:24:36.162Z",
-    "updatedAt": "2017-08-13T18:24:36.162Z"
-  }],
-  "collectionsCount": 2
-}
-```
-
 ### Single Unit
 
 ```JSON
@@ -108,7 +89,16 @@ If a request fails any validations, expect a 422 and errors in the following for
 404 for Not found requests, when a resource can't be found to fulfill the request
 
 
-## Endpoints:
+## Endpoints (with browser):
+
+### Get Units from Collection
+
+`GET /api/collections/:slug/units`
+
+Authentication optional, returns [multiple Units](#multiple-units)
+
+
+## Endpoints (with postman):
 
 ### Authentication (Admin.):
 
@@ -210,12 +200,6 @@ Optional field: `title`
 `DELETE /api/collections/:slug`
 
 Authentication required, returns `{}`
-
-### Get Units from Collection
-
-`GET /api/collections/:slug/units`
-
-Authentication optional, returns [multiple Units](#multiple-units)
 
 ### Add Unit to Collection
 
