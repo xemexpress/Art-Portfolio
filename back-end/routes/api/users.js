@@ -1,4 +1,5 @@
 var mongoose = require('mongoose')
+mongoose.Promise = global.Promise
 var router = require('express').Router()
 var passport = require('passport')
 var User = mongoose.model('User')
@@ -8,6 +9,7 @@ var auth = require('../auth')
 router.post('/users', function(req, res, next){
   if(req.body.user.username === auth.admin){
     var user = new User()
+
     user.username = req.body.user.username
     user.setPassword(req.body.user.password)
 
@@ -50,15 +52,15 @@ router.get('/user', auth.required, function(req, res, next){
 })
 
 // Admin Update
-router.put('/user', auth.required, function(req, res,next){
+router.put('/user', auth.required, function(req, res, next){
   User.findById(req.payload.id).then(function(user){
     if(!user){ return res.sendStatus(401) }
 
-    if(typeof req.payload.password !== 'undefined'){
-      user.setPassword(req.payload.user.password)
+    if(typeof req.body.user.password !== 'undefined'){
+      user.setPassword(req.body.user.password)
     }
-
-    user.save().then(function(){
+    
+    return user.save().then(function(){
       return res.json({ user: user.toAuthJSON() })
     })
   }).catch(next)

@@ -9,8 +9,9 @@ var UserSchema = new mongoose.Schema({
     type: String,
     lowercase: true,
     unique: true,
-    require: [true, 'let the world remember you :)'],
-    match: [/^[a-zA-Z0-9]+$/, 'can be easier']
+    required: [true, 'let the world remember you :)'],
+    match: [/^[a-zA-Z0-9]+$/, 'can be easier'],
+    index: true
   },
   hash: String,
   salt: String
