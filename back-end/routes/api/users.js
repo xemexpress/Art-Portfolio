@@ -6,10 +6,10 @@ var auth = require('../auth')
 
 // Admin initialization
 router.post('/users', function(req, res, next){
-  if(req.body.username === auth.admin){
+  if(req.body.user.username === auth.admin){
     var user = new User()
-    user.username = req.body.username
-    user.setPassword(req.body.password)
+    user.username = req.body.user.username
+    user.setPassword(req.body.user.password)
 
     user.save().then(function(){
       return res.json({ user: user.toAuthJSON() })
