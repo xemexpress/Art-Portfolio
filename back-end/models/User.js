@@ -1,4 +1,5 @@
 var mongoose = require('mongoose')
+var uniqueValidator = require('mongoose-unique-validator')
 var crypto = require('crypto')
 var jwt = require('jsonwebtoken')
 var secret = require('../config').secret
@@ -7,12 +8,15 @@ var UserSchema = new mongoose.Schema({
   username: {
     type: String,
     lowercase: true,
+    unique: true,
     require: [true, 'let the world remember you :)'],
     match: [/^[a-zA-Z0-9]+$/, 'can be easier']
   },
   hash: String,
   salt: String
 }, { timestamps: true })
+
+UserSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 
 UserSchema.methods.setPassword = function(password){
   this.salt = crypto.randomBytes(16).toString('hex')
