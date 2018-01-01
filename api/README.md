@@ -18,11 +18,11 @@
 }
 ```
 
-### Single Project
+### Single Collection
 
 ```JSON
 {
-  "project": {
+  "collection": {
     "slug": "the-sea-of-palaces",
     "title": "The Sea of Palaces",
     "createdAt": "2017-08-14T00:10:59.720Z",
@@ -31,11 +31,11 @@
 }
 ```
 
-### Multiple Projects
+### Multiple Collections
 
 ```JSON
 {
-  "projects":[{
+  "collections":[{
     "slug": "the-sea-of-palaces",
     "title": "The Sea of Palaces",
     "createdAt": "2017-08-14T00:10:59.720Z",
@@ -46,7 +46,7 @@
     "createdAt": "2017-08-13T18:24:36.162Z",
     "updatedAt": "2017-08-13T18:24:36.162Z"
   }],
-  "projectsCount": 2
+  "collectionsCount": 2
 }
 ```
 
@@ -169,84 +169,57 @@ Authentication required, returns the [User](#users-for-authentication)
 
 Optional field: `password`
 
-### List Projects
+### Create Collection
 
-`GET /api/projects`
-
-Query Parameters:
-
-Filter by `category`:
-
-`?category=craft`
-
-Limit number of projects (default is 10):
-
-`?limit=10`
-
-Offset number of projects (default is 0):
-
-`?offset=0`
-
-Authentication optional, returns [multiple projects](#multiple-projects), ordered by most recent first
-
-### Retrieve Project
-
-`GET /api/projects/:slug`
-
-Authentication optional, returns [single Project](#single-project)
- 
-### Create Project
-
-`POST /api/projects`
+`POST /api/collections`
 
 Example request body:
 
 ```JSON
 {
-  "project": {
-    "category": "craft",
+  "collection": {
     "title": "The Sea of Palaces"
   }
 }
 ```
 
-Authentication required, returns the [Project](#single-project)
+Authentication required, returns the [Collection](#single-collection)
 
-Required fields: `category`, `title`
+Required field: `title`
 
-### Update Project
+### Update Collection
 
-`PUT /api/projects/:slug`
+`PUT /api/collections/:slug`
 
 Example request body:
 
 ```JSON
 {
-  "project": {
+  "collection": {
     "title": "Linkage"
   }
 }
 ```
 
-Authentication required, returns the updated [Project](#single-project)
+Authentication required, returns the updated [Collection](#single-collection)
 
-Optional fields: `category`, `title`
+Optional field: `title`
 
-### Delete Project
+### Delete Collection
 
-`DELETE /api/projects/:slug`
+`DELETE /api/collections/:slug`
 
 Authentication required, returns `{}`
 
-### Get Units from a Project
+### Get Units from Collection
 
-`GET /api/projects/:slug/units`
+`GET /api/collections/:slug/units`
 
 Authentication optional, returns [multiple Units](#multiple-units)
 
-### Add Unit to a Project
+### Add Unit to Collection
 
-`POST /api/projects/:slug/units`
+`POST /api/collections/:slug/units`
 
 Example request body:
 
@@ -265,7 +238,7 @@ Required fields: `image`, `text`
 
 ### Update Unit
 
-`PUT /api/projects/:slug/units/:id`
+`PUT /api/collections/:slug/units/:id`
 
 Example request body:
 
@@ -283,6 +256,6 @@ Optional fields: `image`, `text`
 
 ### Delete Unit
 
-`DELETE /api/projects/:slug/units/:id`
+`DELETE /api/collections/:slug/units/:id`
 
 Authentication required, returns `{}`
