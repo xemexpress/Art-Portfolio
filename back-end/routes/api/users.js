@@ -21,11 +21,11 @@ router.post('/users', function(req, res, next){
 
 // Admin login
 router.post('/users/login', function(req, res, next){
-  if(!req.body.username){
+  if(!req.body.user.username){
     res.status(422).json({ errors: { username: "can't be blank" } })
   }
 
-  if(!req.body.password){
+  if(!req.body.user.password){
     res.status(422).json({ errors: { password: "can't be blank" } })
   }
 
@@ -55,7 +55,7 @@ router.put('/user', auth.required, function(req, res,next){
     if(!user){ return res.sendStatus(401) }
 
     if(typeof req.payload.password !== 'undefined'){
-      user.setPassword(req.payload.password)
+      user.setPassword(req.payload.user.password)
     }
 
     user.save().then(function(){
