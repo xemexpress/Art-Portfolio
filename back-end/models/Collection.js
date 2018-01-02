@@ -13,4 +13,24 @@ var CollectionSchema = new mongoose.Schema({
 
 CollectionSchema.plugin(uniqueValidator, { message: 'is already taken.' })
 
+CollectionSchema.methods.slugify = function(){
+  this.slug = slug(this.title)
+}
+
+CollectionSchema.pre('validate', function(next){
+  if(this.slug === ''){
+    this.slugify()
+  }
+  next()
+})
+
+CollectionSchema.methods.toJSONFor = function(){
+  return {
+    slug: this.slug,
+    title: this.title,
+    createdAt: this.createdAt,
+    updatedAt: this.updatedAt
+  }
+}
+
 mongoose.model('Collection', CollectionSchema)
