@@ -16,8 +16,8 @@ router.param('collection', function(req, res,next, slug){
     }).catch(next)
 })
 
-// Create collection
-router.post('/collections', auth.required, function(req, res, next){
+// Create Collection
+router.post('/', auth.required, function(req, res, next){
   User.findById(req.payload.id).then(function(user){
     if(!user){ return res.sendStatus(401) }
     
@@ -28,6 +28,13 @@ router.post('/collections', auth.required, function(req, res, next){
     })
   }).catch(next)
 
+})
+
+// Retrieve Collection
+router.get('/:collection', auth.optional, function(req, res, next){
+  req.collection.execPopulate().then(function(){
+    return res.json({ collection: req.collection.toJSONFor() })
+  }).catch(next)
 })
 
 module.exports = router
