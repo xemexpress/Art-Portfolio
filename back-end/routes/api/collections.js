@@ -37,4 +37,19 @@ router.get('/:collection', auth.optional, function(req, res, next){
   }).catch(next)
 })
 
+// Update Collection
+router.put('/:collection', auth.required, function(req, res, next){
+  User.findById(req.payload.id).then(function(user){
+    if(!user){ return res.sendStatus(401) }
+
+    if(typeof req.body.collection.title !== 'undefined'){
+      req.collection.title = req.body.collection.title
+    }
+
+    req.collection.save().then(function(collection){
+      return res.json({ collection: collection.toJSONFor() })
+    }).catch(next)
+  })
+})
+
 module.exports = router
