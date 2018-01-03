@@ -91,6 +91,12 @@ If a request fails any validations, expect a 422 and errors in the following for
 
 ## Endpoints (with browser):
 
+### Retrieve Collection
+
+`GET /api/collections/:slug`
+
+Authentication optional, returns [single Collection](#single-collection)
+
 ### Get Units from Collection
 
 `GET /api/collections/:slug/units`
