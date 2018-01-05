@@ -8,7 +8,8 @@ var CollectionSchema = new mongoose.Schema({
     lowercase: true,
     unique: true
   },
-  title: String
+  title: String,
+  units: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Unit' }],
 }, { timestamps: true })
 
 CollectionSchema.plugin(uniqueValidator, { message: 'is already taken.' })

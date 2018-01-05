@@ -40,6 +40,7 @@ if(isProduction){
 // Models
 require('./models/User')
 require('./models/Collection')
+require('./models/Unit')
 // Middlewares
 require('./config/passport')
 
