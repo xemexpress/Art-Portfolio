@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 // mongoose.Promise = global.Promise
 var router = require('express').Router()
 var Collection = mongoose.model('Collection')
+var Unit = mongoose.model('Unit')
 var User = mongoose.model('User')
 var auth = require('../auth')
 
@@ -61,6 +62,25 @@ router.delete('/:collection', auth.required, function(req, res, next){
       return res.sendStatus(204)
     })
   })
+})
+
+// Create Unit on Collection
+router.post('/:collection/units', auth.required, function(req, res, next){
+  User.findById(req.payload.id).then(function(user){
+    if(!user){ return res.sendStatus(401) }
+
+    var unit = new Unit(req.body.unit)
+
+    unit.save().then(function(){
+      req.collection.units.push(unit)
+
+      req.collection.save().then(function(){
+        return res.json({
+          unit: unit.toJSONFor()
+        })
+      })
+    })
+  }).catch(next)
 })
 
 module.exports = router
