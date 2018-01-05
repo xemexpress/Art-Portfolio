@@ -216,6 +216,7 @@ Example request body:
 ```JSON
 {
   "unit": {
+    "pos": "a0",
     "image": "image.link",
     "text": "Yo!"
   }
@@ -224,7 +225,7 @@ Example request body:
 
 Authentication required, returns the [Unit](#single-unit)
 
-Required fields: `image`, `text`
+Required fields: `pos`, `image`, `text`
 
 ### Update Unit
 
@@ -242,7 +243,7 @@ Example request body:
 
 Authentication required, returns the updated [Unit](#single-unit)
 
-Optional fields: `image`, `text`
+Optional fields: `pos`, `image`, `text`
 
 ### Delete Unit
 
