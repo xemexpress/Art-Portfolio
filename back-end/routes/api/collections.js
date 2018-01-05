@@ -56,7 +56,7 @@ router.put('/:collection', auth.required, function(req, res, next){
 router.delete('/:collection', auth.required, function(req, res, next){
   User.findById(req.payload.id).then(function(user){
     if(!user){ return res.sendStatus(401) }
-    
+
     return req.collection.remove().then(function(){
       return res.sendStatus(204)
     })

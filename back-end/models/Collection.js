@@ -18,7 +18,7 @@ CollectionSchema.methods.slugify = function(){
 }
 
 CollectionSchema.pre('validate', function(next){
-  if(this.slug === ''){
+  if(!this.slug){
     this.slugify()
   }
   next()
