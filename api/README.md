@@ -36,7 +36,7 @@
 ```JSON
 {
   "unit": {
-    "id": 1,
+    "pos": "a0",
     "image": "image.link",
     "text": "Philosophy",
     "createdAt": "2017-08-13T18:40:39.425Z",
@@ -50,13 +50,13 @@
 ```JSON
 {
   "units": [{
-    "id": 1,
+    "pos": "a0",
     "image": "image.link",
     "text": "Philosophy",
     "createdAt": "2017-08-13T18:40:39.425Z",
     "updatedAt": "2017-08-13T18:40:39.425Z"
   }, {
-    "id": 2,
+    "pos": "a1",
     "image": "image.link",
     "text": "Hope and Fear",
     "createdAt": "2017-08-14T08:49:12.255Z",
