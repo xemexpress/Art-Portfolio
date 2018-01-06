@@ -83,4 +83,22 @@ router.post('/:collection/units', auth.required, function(req, res, next){
   }).catch(next)
 })
 
+// List Units on Collection
+router.get('/:collection/units', auth.optional, function(req, res, next){
+  req.collection.populate({
+    path: 'units',
+    options: {
+      sort: {
+        pos: 'asc'
+      }
+    }
+  }).execPopulate().then(function(collection){
+    return res.json({
+      units: collection.units.map(function(unit){
+        return unit.toJSONFor()
+      })
+    })
+  }).catch(next)
+})
+
 module.exports = router
