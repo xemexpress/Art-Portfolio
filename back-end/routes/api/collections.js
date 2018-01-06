@@ -104,10 +104,13 @@ router.get('/:collection/units', auth.optional, function(req, res, next){
       }
     }
   }).execPopulate().then(function(collection){
+    let unitsCount = collection.units.length
+    
     return res.json({
       units: collection.units.map(function(unit){
         return unit.toJSONFor()
-      })
+      }),
+      unitsCount: unitsCount
     })
   }).catch(next)
 })
