@@ -1,8 +1,10 @@
 var mongoose = require('mongoose')
+var uniqueValidator = require('mongoose-unique-validator')
 
 var UnitSchema = new mongoose.Schema({
   pos: {
     type: String,
+    unique: true,
     required: [true,'get it placed well :)']
   },
   image: {
@@ -18,6 +20,8 @@ var UnitSchema = new mongoose.Schema({
     ref: 'Collection'
   }
 }, { timestamps: true })
+
+UnitSchema.plugin(uniqueValidator, { message: 'is already taken.' })
 
 UnitSchema.methods.toJSONFor = function(){
   return {
