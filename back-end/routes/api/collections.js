@@ -7,11 +7,22 @@ var User = mongoose.model('User')
 var auth = require('../auth')
 
 router.param('collection', function(req, res,next, slug){
-  Collection.findOne({ slug: slug })
-    .then(function(collection){
+  Collection.findOne({ slug: slug }).then(
+    function(collection){
       if(!collection){ return res.sendStatus(404) }
 
       req.collection = collection
+
+      return next()
+    }).catch(next)
+})
+
+router.param('unit', function(req, res, next, pos){
+  Unit.findOne({ pos: pos }).then(
+    function(unit){
+      if(!unit){ return res.sendStatus(404) }
+
+      req.unit = unit
 
       return next()
     }).catch(next)
@@ -99,6 +110,22 @@ router.get('/:collection/units', auth.optional, function(req, res, next){
       })
     })
   }).catch(next)
+})
+
+// Delete Unit
+router.delete('/:collection/units/:unit', auth.required, function(req, res, next){
+  User.findById(req.payload.id).then(function(user){
+    if(!user){ return res.sendStatus(401) }
+
+    req.collection.units.remove(req.unit._id)
+    req.collection.save().then(
+      Unit.find({ _id: req.unit._id }).remove().exec()
+    ).then(
+      function(){
+        res.sendStatus(204)
+      }
+    )
+  })
 })
 
 module.exports = router
