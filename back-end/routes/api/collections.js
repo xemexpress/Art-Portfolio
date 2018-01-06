@@ -82,7 +82,7 @@ router.post('/:collection/units', auth.required, function(req, res, next){
 
     var unit = new Unit(req.body.unit)
 
-    unit.save().then(function(){
+    return unit.save().then(function(){
       req.collection.units.push(unit)
 
       req.collection.save().then(function(){
@@ -105,7 +105,7 @@ router.get('/:collection/units', auth.optional, function(req, res, next){
     }
   }).execPopulate().then(function(collection){
     let unitsCount = collection.units.length
-    
+
     return res.json({
       units: collection.units.map(function(unit){
         return unit.toJSONFor()
