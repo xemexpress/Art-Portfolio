@@ -13,7 +13,7 @@ var UnitSchema = new mongoose.Schema({
     type: String,
     required: [true, 'let people understand your work :)']
   },
-  collection: {
+  fromCollection: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Collection'
   }
