@@ -69,8 +69,14 @@ router.delete('/:collection', auth.required, function(req, res, next){
   User.findById(req.payload.id).then(function(user){
     if(!user){ return res.sendStatus(401) }
 
-    return req.collection.remove().then(function(){
-      return res.sendStatus(204)
+    Unit.find({
+      _id: {
+        $in: req.collection.units
+      }
+    }).remove().then(function(units){
+      return req.collection.remove().then(function(){
+        return res.sendStatus(204)
+      })
     })
   })
 })
