@@ -1,8 +1,8 @@
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
 
-import IMG_4543 from '../IMG_4543.jpg'
-import IMG_4544 from '../IMG_4544.jpg'
+import IMG_4543 from './IMG_4543.jpg'
+import IMG_4544 from './IMG_4544.jpg'
 import './Gallery.css'
 
 class Gallery extends React.Component {
