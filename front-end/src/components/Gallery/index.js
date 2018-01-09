@@ -26,7 +26,7 @@ class Gallery extends React.Component {
             showFullscreenButton={false}
             showPlayButton={false} />
           <div className='description'>
-            Kate Yuen<br />
+            {this.props.artist}<br />
             <i>Metal Folding</i>, 2017<br />
             Brass, silver
           </div>

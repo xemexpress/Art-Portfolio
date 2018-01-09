@@ -6,7 +6,7 @@ class Nav extends React.Component {
       <div className='col-lg-4 col-md-5'>
         <div className='nav'>
           <div className='artist-name'>
-            {this.props.artist.toUpperCase()}
+            {this.props.header.toUpperCase()}
           </div>
           <div className='artist-title'>
             {this.props.concentration}

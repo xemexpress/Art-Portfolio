@@ -7,7 +7,8 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './components/App'
 
 const defaultState = {
-  artist: 'Yuen Pik Kwan',
+  header: 'Yuen Pik Kwan',
+  artist: 'Kate Yuen',
   concentration: 'Metal Maker & Multimedia Designer',
   units: null
 }
