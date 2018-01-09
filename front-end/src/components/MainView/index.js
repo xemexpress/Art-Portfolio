@@ -18,6 +18,13 @@ class MainView extends React.Component {
         originalAlt: 'http://lorempixel.com/250/150/nature/2/'
       }
     ]
+    
+    if(!images){
+      return (
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;Loading</h1>
+      )
+    }
+
     return (      
       <div className='gallery-base col-lg-8 col-md-7'>
         <div className='gallery'>
