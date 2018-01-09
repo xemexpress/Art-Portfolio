@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import Gallery from './Gallery'
+import MainView from './MainView'
 import Nav from './Nav'
 
 const mapStateToProps = state => ({
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <Gallery
+          <MainView
             artist={this.props.artist} />
           <Nav
             header={this.props.header}

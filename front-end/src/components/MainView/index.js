@@ -1,20 +1,21 @@
 import React from 'react'
 import ImageGallery from 'react-image-gallery'
 
+import Description from './Description'
 import IMG_4543 from './IMG_4543.jpg'
 import IMG_4544 from './IMG_4544.jpg'
 import './Gallery.css'
 
-class Gallery extends React.Component {
+class MainView extends React.Component {
   render(){
     const images = [
       {
         original: IMG_4543,
-        originalAlt: 'OAlt1'
+        originalAlt: 'http://lorempixel.com/250/150/nature/1/',
       },
       {
         original: IMG_4544,
-        originalAlt: 'OAlt2'
+        originalAlt: 'http://lorempixel.com/250/150/nature/2/'
       }
     ]
     return (      
@@ -25,15 +26,12 @@ class Gallery extends React.Component {
             showThumbnails={false}
             showFullscreenButton={false}
             showPlayButton={false} />
-          <div className='description'>
-            {this.props.artist}<br />
-            <i>Metal Folding</i>, 2017<br />
-            Brass, silver
-          </div>
+          <Description
+            artist={this.props.artist} />
         </div>
       </div>
     )
   }
 }
 
-export default Gallery
+export default MainView
