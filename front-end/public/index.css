@@ -70,17 +70,41 @@ body {
   list-style: none;
 }
 
-.nav-item {
+.category {
+  position: relative;
   display: block;
   width: 5.6em;
   font-size: 0.85em;
   margin-bottom: 1.2em;
 }
 
-.nav-item:hover {
+.category:hover {
   background: transparent url("./svg/hovering-bar.svg");
   margin-left: -10px;
   padding-left: 10px;
+}
+
+.crafts-drop {
+}
+
+.crafts {
+  /* display: none; */
+  position: absolute;
+  left: 30px;
+  list-style: none;
+}
+
+.crafts li {
+  display: inline-block;
+  margin-top: 10px;
+  padding-right: 1em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+}
+
+
+.design-drop {
+
 }
 
 .nav-deco {

@@ -12,20 +12,27 @@ class Nav extends React.Component {
             {this.props.concentration}
           </div>
           <ul className='navbar'>
-            <li className='nav-item'>
-              <a>Blog</a>
+            <li className='category'>
+              Blog
             </li>
-            <li className='nav-item'>
-              <a>Crafts</a>
+            <li className='category'>
+              <span className='crafts-drop'>Crafts</span>
+              <ul className='crafts'>
+                <li>jewlery&nbsp;practice</li>
+                <li>light&nbsp;up&nbsp;silver&nbsp;jewelry</li>
+                <li>orgami&nbsp;jewelry&nbsp;series</li>
+                <li>shell&nbsp;small&nbsp;object</li>
+                <li>weave&nbsp;jewelry</li>
+              </ul>
             </li>
-            <li className='nav-item'>
-              <a>Design</a>
+            <li className='category'>
+              Design
             </li>
-            <li className='nav-item'>
-              <a>About</a>
+            <li className='category'>
+              About
             </li>
-            <li className='nav-item'>
-              <a>Contact</a>
+            <li className='category'>
+              Contact
             </li>
           </ul>
           <div className='nav-deco'>
