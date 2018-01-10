@@ -11,3 +11,12 @@ const requests = {
   get: url =>
     superagent.get(`${API_ROOT}${url}`).then(responseBody)
 }
+
+const Units = {
+  all: slug => 
+    requests.get(`/collections/${slug}/units`)
+}
+
+export default {
+  Units
+}
