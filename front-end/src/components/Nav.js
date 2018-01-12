@@ -18,6 +18,7 @@ class Nav extends React.Component {
             <li className='category'>
               <span className='crafts-drop'>Crafts</span>
               <ul className='crafts'>
+                <span className='nav-hand'></span>
                 <li>jewlery&nbsp;practice</li>
                 <li>light&nbsp;up&nbsp;silver&nbsp;jewelry</li>
                 <li>orgami&nbsp;jewelry&nbsp;series</li>

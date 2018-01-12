@@ -84,24 +84,39 @@ body {
   padding-left: 10px;
 }
 
-.crafts-drop {
+.nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 4%;
+  height: 40%;
+  position: fixed;
+  top: 301px;
+  right: 227px;
+}
+
+.category:hover .crafts {
+  visibility: visible;
 }
 
 .crafts {
-  /* display: none; */
+  visibility: hidden;
   position: absolute;
-  left: 30px;
+  top: -11px;
+  left: 84px;
   list-style: none;
 }
 
 .crafts li {
   display: inline-block;
+  opacity: 0.37;
   margin-top: 10px;
   padding-right: 1em;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
   border-bottom: 1px solid #000;
 }
 
+.crafts li:hover {
+  opacity: 0.97;
+}
 
 .design-drop {
 
