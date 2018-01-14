@@ -19,11 +19,11 @@ class Nav extends React.Component {
               <span className='crafts-drop'>Crafts</span>
               <ul className='crafts'>
                 <span className='nav-hand'></span>
-                <li>jewlery&nbsp;practice</li>
-                <li>light&nbsp;up&nbsp;silver&nbsp;jewelry</li>
-                <li>orgami&nbsp;jewelry&nbsp;series</li>
-                <li>shell&nbsp;small&nbsp;object</li>
-                <li>weave&nbsp;jewelry</li>
+                <li>Jewlery&nbsp;practice</li>
+                <li>Light&nbsp;up&nbsp;silver&nbsp;jewelry</li>
+                <li>Orgami&nbsp;jewelry&nbsp;series</li>
+                <li>Shell&nbsp;small&nbsp;object</li>
+                <li>Weave&nbsp;jewelry</li>
               </ul>
             </li>
             <li className='category'>

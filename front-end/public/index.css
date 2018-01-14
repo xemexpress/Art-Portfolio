@@ -1,3 +1,11 @@
+html { 
+  background: url('calib.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,7 +21,7 @@ body {
   float: left;
   height: 700px;
   width: 100%;
-  background: #FFF url("./svg/grid.svg");
+  background: transparent url("./svg/grid.svg");
   position: relative;
 }
 
@@ -46,8 +54,8 @@ body {
 /* Nav Component */
 .nav {
   position: fixed !important;
-  right: 60px;
-  top: 187px;
+  right: 85.45px;
+  top: 177px;
 }
 
 .artist-name {
@@ -56,12 +64,15 @@ body {
   text-shadow: -3px 1px 0px #000, -5px -1px 0px #00DDDD;
   font-weight: 350;
   margin-bottom: 0.17em;
+  letter-spacing: -0.2px;
 }
 
 .artist-title {
   font-family: "Cormorant Garamond", serif;
   font-size: 0.85em;
-  margin-bottom: 2.3em;
+  margin-top: -1px;
+  margin-bottom: 2.4em;
+  letter-spacing: -0.23px;
 }
 
 .navbar {
@@ -74,23 +85,25 @@ body {
   position: relative;
   display: block;
   width: 5.6em;
+  color: #575757;
   font-size: 0.85em;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.3em;
 }
 
 .category:hover {
+  color: #000;
   background: transparent url("./svg/hovering-bar.svg");
-  margin-left: -10px;
-  padding-left: 10px;
+  margin-left: -12px;
+  padding-left: 12px;
 }
 
 .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 4%;
+  width: 2.7%;
   height: 40%;
   position: fixed;
-  top: 301px;
-  right: 227px;
+  top: 295px;
+  right: 254px;
 }
 
 .category:hover .crafts {
@@ -98,7 +111,7 @@ body {
 }
 
 .crafts {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: absolute;
   top: -11px;
   left: 84px;
@@ -107,15 +120,18 @@ body {
 
 .crafts li {
   display: inline-block;
-  opacity: 0.37;
-  margin-top: 10px;
+  color: #B9B9B9;
+  font-weight: normal;
+  letter-spacing: 0.7px;
+  margin-top: 20px;
   padding-right: 1em;
   padding-bottom: 1px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #B9B9B9;
 }
 
 .crafts li:hover {
-  opacity: 0.97;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 .design-drop {
@@ -785,7 +801,7 @@ body {
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 66.66667%;
+    flex: 0 0 64.76%;
     max-width: 66.66667%; }
   .col-lg-9 {
     position: relative;
