@@ -7,8 +7,7 @@ var User = mongoose.model('User')
 var auth = require('../auth')
 
 router.param('collection', function(req, res,next, slug){
-  Collection.findOne({ slug: slug }).then(
-    function(collection){
+  Collection.findOne({ slug: slug }).then(function(collection){
       if(!collection){ return res.sendStatus(404) }
 
       req.collection = collection
@@ -39,7 +38,6 @@ router.post('/', auth.required, function(req, res, next){
       return res.json({ collection: collection.toJSONFor() })
     })
   }).catch(next)
-
 })
 
 // Retrieve Collection
