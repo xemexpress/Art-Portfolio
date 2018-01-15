@@ -39,6 +39,7 @@ if(isProduction){
 
 // Models
 require('./models/User')
+require('./models/Article')
 require('./models/Collection')
 require('./models/Unit')
 // Middlewares
