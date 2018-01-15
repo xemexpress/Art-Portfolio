@@ -17,17 +17,32 @@
   }
 }
 ```
+### Single Article
+
+```JSON
+{
+  "article": {
+    "id": 1,
+    "image": "image.link",
+    "body": "Its about a position.",
+    "createdAt": "2017-08-13T18:24:36.162Z",
+    "updatedAt": "2017-08-13T18:24:36.162Z"
+  }
+}
+```
 
 ### Multiple Articles
 
 ```JSON
 {
   "articles": [{
+    "id": 2,
     "image": "image.link",
     "body": "Mark two points on a paper, and connect them.",
     "createdAt": "2017-08-14T00:10:59.720Z",
     "updatedAt": "2017-08-14T00:10:59.720Z"
   }, {
+    "id": 1,
     "image": "image.link",
     "body": "Its about a position.",
     "createdAt": "2017-08-13T18:24:36.162Z",
@@ -139,7 +154,7 @@ Authentication optional, returns [single Collection](#single-collection)
 
 ## Endpoints (with postman):
 
-### Authentication (Admin.):
+### Authentication (Admin.)
 
 `POST /api/users/login`
 
@@ -157,7 +172,7 @@ No authentication required, returns a [User](#users-for-authentication)
 
 Required fields: `username`, `password`
 
-### Registration (Admin.):
+### Registration (Admin.)
 
 `POST /api/users`
 
@@ -197,6 +212,49 @@ Example request body:
 Authentication required, returns the [User](#users-for-authentication)
 
 Optional field: `password`
+
+### Create Article
+
+`POST /api/articles`
+
+Example request body:
+
+```JSON
+{
+  "article": {
+    "image": "image.link",
+    "body": "Mark two points on a paper, and connect them."
+  }
+}
+```
+
+Authentication required, returns the [Article](#single-article)
+
+Required fields: `image`, `body`
+
+### Update Article
+
+`PUT /api/articles/:id`
+
+Example request body:
+
+```JSON
+{
+  "article": {
+    "body": "Link a point to another!"
+  }
+}
+```
+
+Authentication required, returns the updated [Article](#single-article)
+
+Optional fields: `image`, `body`
+
+### Delete Article
+
+`DELETE /api/articles/:id`
+
+Authentication required, returns {}
 
 ### Create Collection
 
