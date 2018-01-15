@@ -98,7 +98,32 @@ body {
   padding-left: 12px;
 }
 
-.nav-hand {
+/* General dropdown */
+.category {
+  cursor: default;
+}
+
+.category li {
+  display: inline-block;
+  color: #B9B9B9;
+  letter-spacing: 0.7px;
+  margin-bottom: 14.8px;
+  padding-right: 0.9em;
+  border-bottom: 1px solid #B9B9B9;
+  cursor: default;
+}
+
+.category li a {
+  cursor: pointer;
+}
+
+.category li:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+/* Crafts dropdown control */
+.crafts .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
   width: 2.7%;
   height: 40%;
@@ -120,24 +145,77 @@ body {
   font-size: 0.8em;
 }
 
-.crafts li {
-  display: inline-block;
-  color: #B9B9B9;
-  letter-spacing: 0.7px;
-  margin-bottom: 14.8px;
-  padding-right: 1em;
-  border-bottom: 1px solid #B9B9B9;
+/* Design dropdown control */
+.design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.7%;
+  height: 40%;
+  position: fixed;
+  top: 327px;
+  right: 254px;
 }
 
-.crafts li:hover {
-  color: #000;
-  border-bottom: 1px solid #000;
+.category:hover .design {
+  visibility: visible;
 }
 
-.design-drop {
-
+.design {
+  visibility: hidden;
+  position: absolute;
+  top: 2px;
+  left: 84px;
+  list-style: none;
+  font-size: 0.8em;
 }
 
+/* Design sub-dropdown control */
+/* Book design */
+.book-design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.3%;
+  height: 40%;
+  position: fixed;
+  top: 336px;
+  right: 138px;
+}
+
+.sub-category:hover .book-design {
+  visibility: visible;
+}
+
+.book-design {
+  visibility: hidden;
+  position: absolute;
+  top: 2px;
+  left: 110px;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+/* Brand design */
+.brand-design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.3%;
+  height: 40%;
+  position: fixed;
+  top: 365px;
+  right: 138px;
+}
+
+.sub-category:hover .brand-design {
+  visibility: visible;
+}
+
+.brand-design {
+  visibility: hidden;
+  position: absolute;
+  top: 31px;
+  left: 110px;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+/* Others */
 .nav-deco {
   background: transparent url("./svg/pattern.svg");
   height: 100px;
