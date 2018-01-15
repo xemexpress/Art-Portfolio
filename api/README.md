@@ -18,6 +18,25 @@
 }
 ```
 
+### Multiple Articles
+
+```JSON
+{
+  "articles": [{
+    "image": "image.link",
+    "body": "Mark two points on a paper, and connect them.",
+    "createdAt": "2017-08-14T00:10:59.720Z",
+    "updatedAt": "2017-08-14T00:10:59.720Z"
+  }, {
+    "image": "image.link",
+    "body": "Its about a position.",
+    "createdAt": "2017-08-13T18:24:36.162Z",
+    "updatedAt": "2017-08-13T18:24:36.162Z"
+  }],
+  "articlesCount": 2
+}
+```
+
 ### Single Collection
 
 ```JSON
@@ -88,6 +107,22 @@ If a request fails any validations, expect a 422 and errors in the following for
 
 
 ## Endpoints (with browser):
+
+### List Articles
+
+`GET /api/articles`
+
+Query Parameters:
+
+Limit number of articles (default is 10):
+
+`?limit=10`
+
+Offset number of articles (default is 0):
+
+`?offset=0`
+
+Authentication optional, returns [multiple articles](#multiple-articles), ordered by most recent first
 
 ### Get Units from Collection
 
