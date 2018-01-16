@@ -4,6 +4,7 @@ var Article = mongoose.model('Article')
 var User = mongoose.model('User')
 var auth = require('../auth')
 
+// Preload Article
 router.param('article', function(req, res, next, id){
   Article.findById(id).then(function(article){
     if(!article){ return res.sendStatus(404) }
@@ -11,6 +12,39 @@ router.param('article', function(req, res, next, id){
     req.article = article
 
     return next()
+  }).catch(next)
+})
+
+// List Articles
+router.get('/', auth.optional, function(req, res, next){
+  var limit = 10
+  var offset = 0
+
+  if(typeof req.query.limit !== 'undefined'){
+    limit = req.query.limit
+  }
+
+  if(typeof req.query.offset !== 'undefined'){
+    offset = req.query.offset
+  }
+
+  return Promise.all([
+    Article.find({})
+    .limit(limit)
+    .skip(offset)
+    .sort({ createdAt: 'desc' })
+    .exec(),
+    Article.count({})
+  ]).then(function(results){
+    let articles = results[0]
+    let articlesCount = results[1]
+
+    return res.json({
+      articles: articles.map(function(article){
+        return article.toJSONFor()
+      }),
+      articlesCount: articlesCount
+    })
   }).catch(next)
 })
 
@@ -58,7 +92,7 @@ router.delete('/:article', auth.required, function(req, res, next){
   User.findById(req.payload.id).then(function(user){
     if(!user){ return res.sendStatus(401) }
 
-    return req.article.remove().then(function(){
+    req.article.remove().then(function(){
       return res.sendStatus(204)
     })
   }).catch(next)

@@ -12,11 +12,17 @@ const requests = {
     superagent.get(`${API_ROOT}${url}`).then(responseBody)
 }
 
+const Articles = {
+  all: page =>
+    requests.get(`/articles?limit=10`)
+}
+
 const Units = {
   all: slug => 
     requests.get(`/collections/${slug}/units`)
 }
 
 export default {
+  Articles,
   Units
 }
