@@ -30,8 +30,8 @@ router.get('/', auth.optional, function(req, res, next){
 
   return Promise.all([
     Article.find({})
-    .limit(limit)
-    .skip(offset)
+    .limit(Number(limit))
+    .skip(Number(offset))
     .sort({ createdAt: 'desc' })
     .exec(),
     Article.count({})
