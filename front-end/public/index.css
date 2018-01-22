@@ -1,6 +1,6 @@
 /* Calibration purpose */
 html { 
-  background: url('calib1.jpg') no-repeat center center fixed; 
+  background: url('calibBlog.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,13 +28,11 @@ body {
 /* Blog Component */
 .blog {
   margin-left: 27px;
-  font-family: "Cormorant Garamond", serif;
-
 }
 
 .blog-unit {
   width: 51.4%;
-  margin: 30px auto 107px;
+  margin: 176px auto -139px;
 }
 
 .blog img {
@@ -44,13 +42,18 @@ body {
 .blog-date {
   float: right;
   color: red;
-  font-size: 0.96em;
-  margin-top: 2px;
+  font-size: 0.7em;
+  margin-top: 7px;
+  margin-right: 1px;
+  letter-spacing: 1px;
 }
 
 .blog-body {
-  font-size: 0.8em;
-  margin-top: 32px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.77em;
+  margin-top: 34px;
+  line-height: 121%;
+  letter-spacing: 0.46px;
 }
 
 /* Gallery Component */
