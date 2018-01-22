@@ -13,12 +13,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
-
-/* Specifics */
-
-/* Gallery Component */
-.gallery-base {
+.main-view {
   float: left;
   height: 700px;
   width: 100%;
@@ -26,6 +21,39 @@ body {
   position: relative;
 }
 
+
+
+/* Specifics */
+
+/* Blog Component */
+.blog {
+  margin-left: 27px;
+  font-family: "Cormorant Garamond", serif;
+
+}
+
+.blog-unit {
+  width: 51.4%;
+  margin: 30px auto 107px;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.blog-date {
+  float: right;
+  color: red;
+  font-size: 0.96em;
+  margin-top: 2px;
+}
+
+.blog-body {
+  font-size: 0.8em;
+  margin-top: 32px;
+}
+
+/* Gallery Component */
 .gallery {
   position: absolute;
   top: 50%;
