@@ -2,10 +2,16 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Gallery from '../Gallery'
+import ArticleList from '../ArticleList'
 import agent from '../../agent'
 // Testing Purpose
 // import IMG_4543 from './IMG_4543.jpg'
 // import IMG_4544 from './IMG_4544.jpg'
+
+const mapStateToProps = state => ({
+  artist: state.artist,
+  articles: state.articles
+})
 
 const mapDispatchToProps = dispatch => ({
   onLoad: payload => dispatch({
@@ -32,18 +38,20 @@ class MainView extends React.Component {
     // ]
     const images = null
 
-    if(images){
-      return (      
-        <div className='gallery-base col-lg-8 col-md-7'>
-          <Gallery
-            images={images}
-            artist={this.props.artist} />
-        </div>
-      )
-    }else{
-      return <h1>&nbsp;&nbsp;&nbsp;&nbsp;Loading</h1>
-    }
+    return (
+      <div className='main-view col-lg-8 col-md-7'>
+      {
+        images ?
+        <Gallery
+          images={images}
+          artist={this.props.artist} />
+        :
+        <ArticleList
+          articles={this.props.articles} />
+      }
+      </div>
+    )
   }
 }
 
-export default connect(()=>({}), mapDispatchToProps)(MainView)
+export default connect(mapStateToProps, mapDispatchToProps)(MainView)
