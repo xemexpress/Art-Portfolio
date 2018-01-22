@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import MainView from './MainView'
 import Nav from './Nav'
 
 const mapStateToProps = state => ({
@@ -15,7 +15,9 @@ class App extends React.Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <MainView />
+          <div className='main-view col-lg-8 col-md-7'>
+            {this.props.children}
+          </div>
           <Nav
             header={this.props.header}
             concentration={this.props.concentration} />
@@ -23,6 +25,10 @@ class App extends React.Component {
       </div>
     );
   }
+}
+
+App.contextTypes = {
+  router: PropTypes.object.isRequired
 }
 
 export default connect(mapStateToProps, () => ({}))(App)
