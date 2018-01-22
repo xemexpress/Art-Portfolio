@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ArticlePreview = props => {
+const Article = props => {
   const article = props.article
 
   // Format date
@@ -17,4 +17,4 @@ const ArticlePreview = props => {
   )
 }
 
-export default ArticlePreview
+export default Article

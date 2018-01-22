@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import ArticlePreview from './ArticlePreview'
-import agent from '../agent'
+import Article from './Article'
+import agent from '../../agent'
 
 const mapStateToProps = state => ({
   articles: state.articles
@@ -33,7 +33,7 @@ class Blog extends React.Component {
       <div className='blog'>
         {
           this.props.articles.map(article => {
-            return <ArticlePreview article={article} key={article.id} />
+            return <Article article={article} key={article.id} />
           })
         }
       </div>
