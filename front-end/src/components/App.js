@@ -6,7 +6,6 @@ import Nav from './Nav'
 
 const mapStateToProps = state => ({
   header: state.header,
-  artist: state.artist,
   concentration: state.concentration,
   units: state.units
 })
@@ -16,8 +15,7 @@ class App extends React.Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <MainView
-            artist={this.props.artist} />
+          <MainView />
           <Nav
             header={this.props.header}
             concentration={this.props.concentration} />
