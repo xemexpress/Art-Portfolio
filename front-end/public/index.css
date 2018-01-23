@@ -1,6 +1,6 @@
 /* Calibration purpose */
 html { 
-  background: url('calibBlog.jpg') no-repeat center center fixed; 
+  background: url('calibAbout.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -82,6 +82,25 @@ body {
   letter-spacing: 0.07em;
 }
 
+/* About Component */
+.about {
+  margin: 266px 192px 30px;
+  background: rgba(0,0,0,0.1);
+}
+
+.about img {
+  width: 47px;
+  height: 47px;
+  float: left;
+}
+
+.welcome {
+  padding: 11px;
+  font-size: 0.842em;
+  letter-spacing: -0.14px;
+  position: relative;
+  left: 8.5px;
+}
 
 /* Nav Component */
 .nav {
