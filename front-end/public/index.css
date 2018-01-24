@@ -127,6 +127,76 @@ body {
   font-size: 0.8em;
 }
 
+/* Design dropdown control */
+.design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.7%;
+  height: 40%;
+  position: fixed;
+  top: 327px;
+  right: 254px;
+}
+
+.category:hover .design {
+  visibility: visible;
+}
+
+.design {
+  visibility: hidden;
+  position: absolute;
+  top: 2px;
+  left: 84px;
+  list-style: none;
+  font-size: 0.8em;
+}
+
+/* Design sub-dropdown control */
+/* Book design */
+.book-design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.3%;
+  height: 40%;
+  position: fixed;
+  top: 336px;
+  right: 138px;
+}
+
+.sub-category:hover .book-design {
+  visibility: visible;
+}
+
+.book-design {
+  visibility: hidden;
+  position: absolute;
+  top: 2px;
+  left: 110px;
+  list-style: none;
+  font-size: 0.9em;
+}
+
+/* Brand design */
+.brand-design .nav-hand {
+  background: transparent url("./svg/nav-hand.svg") no-repeat;
+  width: 2.3%;
+  height: 40%;
+  position: fixed;
+  top: 365px;
+  right: 138px;
+}
+
+.sub-category:hover .brand-design {
+  visibility: visible;
+}
+
+.brand-design {
+  visibility: hidden;
+  position: absolute;
+  top: 31px;
+  left: 110px;
+  list-style: none;
+  font-size: 0.9em;
+}
+
 /* Blog Component */
 .blog {
   margin-left: 27px;
@@ -237,76 +307,6 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 0.8em;
   letter-spacing: 0.01em;
-}
-
-/* Design dropdown control */
-.design .nav-hand {
-  background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.7%;
-  height: 40%;
-  position: fixed;
-  top: 327px;
-  right: 254px;
-}
-
-.category:hover .design {
-  visibility: visible;
-}
-
-.design {
-  visibility: hidden;
-  position: absolute;
-  top: 2px;
-  left: 84px;
-  list-style: none;
-  font-size: 0.8em;
-}
-
-/* Design sub-dropdown control */
-/* Book design */
-.book-design .nav-hand {
-  background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.3%;
-  height: 40%;
-  position: fixed;
-  top: 336px;
-  right: 138px;
-}
-
-.sub-category:hover .book-design {
-  visibility: visible;
-}
-
-.book-design {
-  visibility: hidden;
-  position: absolute;
-  top: 2px;
-  left: 110px;
-  list-style: none;
-  font-size: 0.9em;
-}
-
-/* Brand design */
-.brand-design .nav-hand {
-  background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.3%;
-  height: 40%;
-  position: fixed;
-  top: 365px;
-  right: 138px;
-}
-
-.sub-category:hover .brand-design {
-  visibility: visible;
-}
-
-.brand-design {
-  visibility: hidden;
-  position: absolute;
-  top: 31px;
-  left: 110px;
-  list-style: none;
-  font-size: 0.9em;
 }
 
 /* Others */
