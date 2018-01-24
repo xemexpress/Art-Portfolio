@@ -1,16 +1,22 @@
 /* Calibration purpose */
-html { 
+/* html { 
   background: url('calibAbout.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow: hidden;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 .main-view {
@@ -18,123 +24,15 @@ body {
   height: 700px;
   width: 100%;
   background: transparent url("./svg/grid.svg");
-  position: relative;
+  overflow: scroll;
 }
 
-
+.link {
+  color: inherit;
+  text-decoration: none !important;
+}
 
 /* Specifics */
-
-/* Blog Component */
-.blog {
-  margin-left: 27px;
-}
-
-.blog-unit {
-  width: 51.4%;
-  margin: 176px auto -139px;
-}
-
-.blog img {
-  width: 100%;
-}
-
-.blog-date {
-  float: right;
-  color: red;
-  font-size: 0.7em;
-  margin-top: 7px;
-  margin-right: 1px;
-  letter-spacing: 1px;
-}
-
-.blog-body {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.77em;
-  margin-top: 34px;
-  line-height: 121%;
-  letter-spacing: 0.46px;
-}
-
-/* Gallery Component */
-.gallery {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.image-gallery {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.image-gallery-left-nav::before {
-  margin-left: -1.5em;
-}
-
-.image-gallery-right-nav::before {
-  margin-right: -1.5em;
-}
-
-.description {
-  margin-top: 2em;
-  font-size: 0.87em;
-  letter-spacing: 0.07em;
-}
-
-/* Contact Component */
-.contact {
-  left: -21px;
-  margin-top: 266px;
-  background: rgba(0,0,0,0.1);
-}
-
-.contact img {
-  float: left;
-  position: relative;
-  left: -5px;
-  top: 1px;
-  width: 46px;
-  height: 46px;
-}
-
-.welcome {
-  position: relative;
-  left: 3px;
-  padding: 11px;
-  font-size: 0.842em;
-  letter-spacing: -0.14px;
-}
-
-.contact input {
-  margin-top: 18px;
-  width: 34.5%;
-  outline: none;
-  border: 1px solid #00DDDD;
-  background: transparent;
-  padding: 5.8px 10px;
-}
-
-.contact textarea {
-  margin-top: 12px;
-  width: 86%;
-  border: 1px solid #00DDDD;
-  outline: none;
-  resize: none;
-  background: transparent;
-  padding: 5.8px 10px 10px;
-}
-
-.contact button {
-  float: right;
-  margin: 7px 40px;
-  border: none;
-  background: #00DDDD;
-  padding: 6px 27px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 0.8em;
-  letter-spacing: 0.01em;
-}
 
 /* Nav Component */
 .nav {
@@ -144,19 +42,19 @@ body {
 }
 
 .artist-name {
+  margin-bottom: 0.17em;
   font-size: 2.2em;
   color: #FAE5FF;
   text-shadow: -3px 1px 0px #000, -5px -1px 0px #00DDDD;
   font-weight: 350;
-  margin-bottom: 0.17em;
   letter-spacing: -0.2px;
 }
 
 .artist-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.85em;
   margin-top: -1px;
   margin-bottom: 2.4em;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85em;
   letter-spacing: -0.23px;
 }
 
@@ -227,6 +125,118 @@ body {
   left: 84px;
   list-style: none;
   font-size: 0.8em;
+}
+
+/* Blog Component */
+.blog {
+  margin-left: 27px;
+}
+
+.blog-unit {
+  width: 51.4%;
+  margin: 176px auto -139px;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.blog-date {
+  float: right;
+  color: red;
+  font-size: 0.7em;
+  margin-top: 7px;
+  margin-right: 1px;
+  letter-spacing: 1px;
+}
+
+.blog-body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.77em;
+  margin-top: 34px;
+  line-height: 121%;
+  letter-spacing: 0.46px;
+}
+
+/* Gallery Component */
+.gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-gallery {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-gallery-left-nav::before {
+  margin-left: -1.5em;
+}
+
+.image-gallery-right-nav::before {
+  margin-right: -1.5em;
+}
+
+.description {
+  margin-top: 2em;
+  font-size: 0.87em;
+  letter-spacing: 0.07em;
+}
+
+/* Contact Component */
+.contact {
+  left: -21px;
+  margin-top: 266px;
+  /* background: rgba(0,0,0,0.1); */
+}
+
+.contact img {
+  float: left;
+  position: relative;
+  left: -5px;
+  top: 1px;
+  width: 46px;
+  height: 46px;
+}
+
+.welcome {
+  position: relative;
+  left: 3px;
+  padding: 11px;
+  font-size: 0.842em;
+  letter-spacing: -0.14px;
+}
+
+.contact input {
+  margin-top: 18px;
+  width: 34.5%;
+  outline: none;
+  border: 1px solid #00DDDD;
+  background: transparent;
+  padding: 5.8px 10px;
+}
+
+.contact textarea {
+  margin-top: 12px;
+  width: 86%;
+  border: 1px solid #00DDDD;
+  outline: none;
+  resize: none;
+  background: transparent;
+  padding: 5.8px 10px 10px;
+}
+
+.contact button {
+  float: right;
+  margin: 7px 40px;
+  border: none;
+  cursor: pointer;
+  background: #00DDDD;
+  padding: 6px 27px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
 }
 
 /* Design dropdown control */
