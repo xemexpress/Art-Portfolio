@@ -82,24 +82,58 @@ body {
   letter-spacing: 0.07em;
 }
 
-/* About Component */
-.about {
-  margin: 266px 192px 30px;
+/* Contact Component */
+.contact {
+  left: -21px;
+  margin-top: 266px;
   background: rgba(0,0,0,0.1);
 }
 
-.about img {
-  width: 47px;
-  height: 47px;
+.contact img {
   float: left;
+  position: relative;
+  left: -5px;
+  top: 1px;
+  width: 46px;
+  height: 46px;
 }
 
 .welcome {
+  position: relative;
+  left: 3px;
   padding: 11px;
   font-size: 0.842em;
   letter-spacing: -0.14px;
-  position: relative;
-  left: 8.5px;
+}
+
+.contact input {
+  margin-top: 18px;
+  width: 34.5%;
+  outline: none;
+  border: 1px solid #00DDDD;
+  background: transparent;
+  padding: 5.8px 10px;
+}
+
+.contact textarea {
+  margin-top: 12px;
+  width: 86%;
+  border: 1px solid #00DDDD;
+  outline: none;
+  resize: none;
+  background: transparent;
+  padding: 5.8px 10px 10px;
+}
+
+.contact button {
+  float: right;
+  margin: 7px 40px;
+  border: none;
+  background: #00DDDD;
+  padding: 6px 27px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 0.01em;
 }
 
 /* Nav Component */
