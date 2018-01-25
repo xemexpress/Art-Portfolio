@@ -51,21 +51,18 @@ class Nav extends React.Component {
                     <li><Link to='gallery/mindtree' className='link'>Mindtree</Link></li>
                     <li><Link to='gallery/sound' className='link'>Sound</Link></li>
                     <li><Link to='gallery/stationary' className='link'>Stationary</Link></li>
-                    <li><Link to='gallery/tongxianghui' className='link'>Tong&nbsp;Xiang Association</Link></li>
+                    <li><Link to='gallery/tong-xiang-association' className='link'>Tong&nbsp;Xiang Association</Link></li>
                   </ul>
                 </li>
-                <li><Link to='gallery/graphic-sketch' className='link'>Graphic&nbsp;&amp;&nbsp;Sketch</Link></li>
+                <li><Link to='gallery/graphic-and-sketch' className='link'>Graphic&nbsp;&amp;&nbsp;Sketch</Link></li>
                 <li><Link to='gallery/icon-design' className='link'>Icon</Link></li><br/>
                 <li><Link to='gallery/ui-design' className='link'>UI</Link></li><br/>
                 <li><Link to='gallery/others' className='link'>Others</Link></li>
               </ul>
             </li>
             <li className='category'>
-              About
-            </li>
-            <li className='category'>
-              <Link to='contact' className='link'>
-                Contact
+              <Link to='about' className='link'>
+                About
               </Link>
             </li>
           </ul>
