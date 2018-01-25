@@ -5,9 +5,8 @@ import { connect } from 'react-redux'
 import Nav from './Nav'
 
 const mapStateToProps = state => ({
-  header: state.header,
-  concentration: state.concentration,
-  units: state.units
+  header: state.common.header,
+  concentration: state.common.concentration
 })
 
 class App extends React.Component {

@@ -1,24 +1,17 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { promiseMiddleware } from './middleware'
 
-const defaultState = {
-  header: 'Yuen Pik Kwan',
-  artist: 'Kate Yuen',
-  concentration: 'Metal Maker & Multimedia Designer',
-  units: null
-}
+import common from './reducers/common'
+import blog from './reducers/blog'
+import gallery from './reducers/gallery'
+import about from './reducers/about'
 
-const reducer = function(state = defaultState, action){
-  switch(action.type){
-    case 'BLOG_PAGE_LOADED':
-      return {
-        ...state,
-        articles: action.payload.articles
-      }
-    default:
-  }
-  return state
-}
+const reducer = combineReducers({
+  common,
+  blog,
+  gallery,
+  about
+})
 
 const middleware = applyMiddleware(promiseMiddleware)
 
