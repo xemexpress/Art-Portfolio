@@ -106,7 +106,7 @@ If a request fails any validations, expect a 422 and errors in the following for
 
 ```JSON
 {
-  "errors":{
+  "errors": {
     "body": [
       "can't be empty"
     ]
@@ -145,12 +145,23 @@ Authentication optional, returns [multiple articles](#multiple-articles), ordere
 
 Authentication optional, returns [multiple Units](#multiple-units)
 
-### Retrieve Collection
+### Send email to the Artist
 
-`GET /api/collections/:slug`
+`POST /api/about`
 
-Authentication optional, returns [single Collection](#single-collection)
+Example request body:
+```JSON
+{
+  "mail": {
+    "messager": "Another Artist",
+    "message": "Some words here."
+  }
+}
+```
 
+Authentication optional, returns `{ message: 'sent' }`
+
+Required fields: `messager`, `message`
 
 ## Endpoints (with postman):
 
@@ -161,7 +172,7 @@ Authentication optional, returns [single Collection](#single-collection)
 Example request body:
 ```JSON
 {
-  "user":{
+  "user": {
     "username": "artist",
     "password": "password"
   }
@@ -179,7 +190,7 @@ Required fields: `username`, `password`
 Example request body:
 ```JSON
 {
-  "user":{
+  "user": {
     "username": "artist",
     "password": "password"
   }
@@ -203,7 +214,7 @@ Authentication required, returns a [User](#users-for-authentication) that's the 
 Example request body:
 ```JSON
 {
-  "user":{
+  "user": {
     "password": "newPassword"
   }
 }
