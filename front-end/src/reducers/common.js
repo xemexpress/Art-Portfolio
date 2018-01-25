@@ -5,5 +5,18 @@ const defaultState = {
 }
 
 export default (state=defaultState, action) => {
+  switch(action.type){
+    case 'REDIRECT':
+      return {
+        ...state,
+        redirectTo: null
+      }
+    case 'SEND_MAIL':
+      return {
+        ...state,
+        redirectTo: action.error ? null : '/'
+      }
+    default:
+  }
   return state
 }

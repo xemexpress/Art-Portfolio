@@ -6,10 +6,24 @@ import Nav from './Nav'
 
 const mapStateToProps = state => ({
   header: state.common.header,
-  concentration: state.common.concentration
+  concentration: state.common.concentration,
+  redirectTo: state.common.redirectTo
+})
+
+const mapDispatchToProps = dispatch => ({
+  onRedirect: () => dispatch({
+    type: 'REDIRECT'
+  })
 })
 
 class App extends React.Component {
+  componentWillReceiveProps(nextProps){
+    if(nextProps.redirectTo){
+      this.context.router.replace(nextProps.redirectTo)
+      this.props.onRedirect()
+    }
+  }
+
   render() {
     return (
       <div className='container-fluid'>
@@ -30,4 +44,4 @@ App.contextTypes = {
   router: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, () => ({}))(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
