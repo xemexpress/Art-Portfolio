@@ -1,16 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const mapStateToProps = state => ({
-  messager: state.about.messager,
-  message: state.about.message
-})
+import ListErrors from './ListErrors'
+import agent from '../agent'
+
+const mapStateToProps = state => ({ ...state.about })
 
 const mapDispatchToProps = dispatch => ({
   onUpdateField: (key, value) => dispatch({
     type: 'UPDATE_FIELD_ABOUT',
     key,
     value
+  }),
+  onSubmit: (messager, message) => dispatch({
+    type: 'SEND_MAIL',
+    payload: agent.Message.send(messager, message)
   })
 })
 
@@ -21,6 +25,11 @@ class About extends React.Component {
     const updateFieldEvent = key => ev => this.props.onUpdateField(key, ev.target.value)
     this.changeMessager = updateFieldEvent('messager')
     this.changeMessage = updateFieldEvent('message')
+
+    this.submitMessage = (messager, message) => ev => {
+      ev.preventDefault()
+      this.props.onSubmit(messager, message)
+    }
   }
 
   render(){
@@ -39,7 +48,7 @@ class About extends React.Component {
               </div>  
             </div>
             
-            <form>
+            <form onSubmit={this.submitMessage(messager, message)}>
               <input
                 className='messager'
                 type='text'
@@ -57,10 +66,12 @@ class About extends React.Component {
                 onChange={this.changeMessage} />
               <br/>
               <button
-                type='submit'>
+                type='submit'
+                disabled={this.props.inProgress}>
                 Send
               </button>
             </form>
+            <ListErrors errors={this.props.errors} />
           </div>
         </div>
       </div>
