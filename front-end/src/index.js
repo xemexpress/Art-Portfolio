@@ -7,7 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import App from './components/App'
 import Blog from './components/Blog'
 import Gallery from './components/Gallery'
-import Contact from './components/Contact'
+import About from './components/About'
 import store from './store'
 
 ReactDOM.render((
@@ -16,7 +16,7 @@ ReactDOM.render((
       <Route path='/' component={App}>
         <IndexRoute component={Blog} />
         <Route path='gallery/:slug' component={Gallery} />
-        <Route path='contact' component={Contact} />
+        <Route path='about' component={About} />
       </Route>
     </Router>
   </Provider>
