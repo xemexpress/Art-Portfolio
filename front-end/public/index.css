@@ -1,6 +1,6 @@
 /* Calibration purpose */
 /* html { 
-  background: url('calibSubNav.jpg') no-repeat center center fixed; 
+  background: url('calibAbout.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -263,18 +263,14 @@ body {
   left: -21px;
 }
 
-.about img {
-  float: left;
+.about a {
   position: relative;
   left: -5px;
   top: 1px;
-  width: 46px;
-  height: 46px;
 }
 
 .welcome {
-  position: relative;
-  left: 3px;
+  left: -21px;
   padding: 11px;
   font-size: 0.842em;
   letter-spacing: -0.14px;
