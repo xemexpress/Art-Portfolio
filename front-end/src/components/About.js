@@ -1,7 +1,30 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+const mapStateToProps = state => ({
+  messager: state.about.messager,
+  message: state.about.message
+})
+
+const mapDispatchToProps = dispatch => ({
+  onUpdateField: (key, value) => dispatch({
+    type: 'UPDATE_FIELD_ABOUT',
+    key,
+    value
+  })
+})
 
 class About extends React.Component {
+  constructor(){
+    super()
+
+    const updateFieldEvent = key => ev => this.props.onUpdateField(key, ev.target.value)
+    this.changeMessager = updateFieldEvent('messager')
+    this.changeMessage = updateFieldEvent('message')
+  }
+
   render(){
+    const { messager, message } = this.props
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -20,12 +43,18 @@ class About extends React.Component {
               <input
                 className='messager'
                 type='text'
-                placeholder='Your name' /><br/>
+                maxlength='70'
+                placeholder='Your name'
+                value={messager}
+                onChange={this.changeMessager} /><br/>
               <textarea
                 className='message'
                 type='text'
                 rows='9'
-                placeholder='Write down something...' />
+                maxlength='250'
+                placeholder='Write down something...'
+                value={message}
+                onChange={this.changeMessage} />
               <br/>
               <button
                 type='submit'>
@@ -39,4 +68,4 @@ class About extends React.Component {
   }
 }
 
-export default About
+export default connect(mapStateToProps, mapDispatchToProps)(About)
