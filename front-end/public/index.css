@@ -107,11 +107,11 @@ body {
 /* Crafts dropdown control */
 .crafts .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
+  position: fixed;
+  top: 294px;
+  right: 254px;
   width: 2.7%;
   height: 40%;
-  position: fixed;
-  top: 295px;
-  right: 254px;
 }
 
 .category:hover .crafts {
@@ -130,11 +130,11 @@ body {
 /* Design dropdown control */
 .design .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.7%;
-  height: 40%;
   position: fixed;
   top: 327px;
   right: 254px;
+  width: 2.7%;
+  height: 40%;
 }
 
 .category:hover .design {
@@ -206,8 +206,8 @@ body {
 }
 
 .blog-unit {
-  width: 51.4%;
   margin: 176px auto -139px;
+  width: 51.4%;
 }
 
 .blog img {
@@ -216,18 +216,18 @@ body {
 
 .blog-date {
   float: right;
-  color: red;
-  font-size: 0.7em;
   margin-top: 7px;
   margin-right: 1px;
+  color: red;
+  font-size: 0.7em;
   letter-spacing: 1px;
 }
 
 .blog-body {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.77em;
   margin-top: 34px;
   line-height: 121%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.77em;
   letter-spacing: 0.46px;
 }
 
@@ -258,13 +258,12 @@ body {
 }
 
 /* Contact Component */
-.contact {
-  left: -21px;
+.about {
   margin-top: 266px;
-  /* background: rgba(0,0,0,0.1); */
+  left: -21px;
 }
 
-.contact img {
+.about img {
   float: left;
   position: relative;
   left: -5px;
@@ -281,7 +280,7 @@ body {
   letter-spacing: -0.14px;
 }
 
-.contact input {
+.about input {
   margin-top: 18px;
   width: 34.5%;
   outline: none;
@@ -290,7 +289,7 @@ body {
   padding: 5.8px 10px;
 }
 
-.contact textarea {
+.about textarea {
   margin-top: 12px;
   width: 86%;
   border: 1px solid #00DDDD;
@@ -300,7 +299,7 @@ body {
   padding: 5.8px 10px 10px;
 }
 
-.contact button {
+.about button {
   float: right;
   margin: 7px 40px;
   border: none;
@@ -314,11 +313,11 @@ body {
 
 /* Others */
 .nav-deco {
+  margin-top: -109px;
+  margin-left: 27px;
   background: transparent url("./svg/pattern.svg");
   height: 100px;
   width: 100px;
-  margin-top: -109px;
-  margin-left: 27px;
 }
 
 
