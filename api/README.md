@@ -331,7 +331,7 @@ Required fields: `pos`, `image`, `text`
 
 ### Update Unit
 
-`PUT /api/collections/:slug/units/:id`
+`PUT /api/collections/:slug/units/:pos`
 
 Example request body:
 
@@ -349,6 +349,6 @@ Optional fields: `pos`, `image`, `text`
 
 ### Delete Unit
 
-`DELETE /api/collections/:slug/units/:id`
+`DELETE /api/collections/:slug/units/:pos`
 
 Authentication required, returns `{}`
