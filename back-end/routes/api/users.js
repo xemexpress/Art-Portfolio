@@ -24,11 +24,11 @@ router.post('/users', function(req, res, next){
 // Admin login
 router.post('/users/login', function(req, res, next){
   if(!req.body.user.username){
-    res.status(422).json({ errors: { username: "can't be blank" } })
+    return res.status(422).json({ errors: { username: "can't be blank" } })
   }
 
   if(!req.body.user.password){
-    res.status(422).json({ errors: { password: "can't be blank" } })
+    return res.status(422).json({ errors: { password: "can't be blank" } })
   }
 
   passport.authenticate('local', { session: false }, function(err, user, info){
