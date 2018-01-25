@@ -20,7 +20,7 @@ const Articles = {
 }
 
 const Units = {
-  all: slug => 
+  fromCollection: slug => 
     requests.get(`/collections/${slug}/units`)
 }
 

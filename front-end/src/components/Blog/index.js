@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   onLoad: payload => dispatch({
     type: 'BLOG_PAGE_LOADED',
-    payload: payload
+    payload
   })
 })
 
