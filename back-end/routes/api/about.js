@@ -5,11 +5,11 @@ var auth = require('../auth')
 router.post('/', auth.optional, function(req, res, next){
   console.log(req.body)
   if(!req.body.mail.messager){
-    return res.status(422).json({ errors: { messager: "better be provided :)" } })
+    return res.status(422).json({ errors: { Name: "can't be empty :)" } })
   }
 
   if(!req.body.mail.message){
-    return res.status(422).json({ errors: { message: "better have something to say :)" } })
+    return res.status(422).json({ errors: { Content: "can't be blank :)" } })
   }
 
   let transporter = nodemailer.createTransport({
