@@ -20,7 +20,7 @@ body {
 }
 
 .main-view {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: transparent url("./svg/grid.svg");
   overflow: scroll;
@@ -256,7 +256,7 @@ body {
   letter-spacing: 0.07em;
 }
 
-/* Contact Component */
+/* About Component */
 .about {
   margin-top: 266px;
   left: -21px;
