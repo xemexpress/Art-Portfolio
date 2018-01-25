@@ -1,6 +1,6 @@
 /* Calibration purpose */
 /* html { 
-  background: url('calibAbout.jpg') no-repeat center center fixed; 
+  background: url('calibBlog.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,8 +20,7 @@ body {
 }
 
 .main-view {
-  float: left;
-  height: 700px;
+  height: 100%;
   width: 100%;
   background: transparent url("./svg/grid.svg");
   overflow: scroll;

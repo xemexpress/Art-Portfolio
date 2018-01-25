@@ -5,7 +5,7 @@ import Article from './Article'
 import agent from '../../agent'
 
 const mapStateToProps = state => ({
-  articles: state.articles
+  articles: state.blog.articles
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -43,7 +43,7 @@ class About extends React.Component {
               <input
                 className='messager'
                 type='text'
-                maxlength='70'
+                maxLength='70'
                 placeholder='Your name'
                 value={messager}
                 onChange={this.changeMessager} /><br/>
@@ -51,7 +51,7 @@ class About extends React.Component {
                 className='message'
                 type='text'
                 rows='9'
-                maxlength='250'
+                maxLength='250'
                 placeholder='Write down something...'
                 value={message}
                 onChange={this.changeMessage} />
