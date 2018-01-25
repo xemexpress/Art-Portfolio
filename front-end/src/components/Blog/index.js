@@ -22,11 +22,11 @@ class Blog extends React.Component {
 
   render(){
     if(!this.props.articles){
-      return <div>Loading articles...</div>
+      return <div className='blog'>Loading articles...</div>
     }
   
     if(this.props.articles.length === 0){
-      return <div>No articles here yet.</div>
+      return <div className='blog'>No articles here yet.</div>
     }
   
     return (

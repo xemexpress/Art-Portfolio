@@ -15,6 +15,9 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: (messager, message) => dispatch({
     type: 'SEND_MAIL',
     payload: agent.Message.send(messager, message)
+  }),
+  onUnload: () => dispatch({
+    type: 'ABOUT_PAGE_UNLOADED'
   })
 })
 
@@ -30,6 +33,10 @@ class About extends React.Component {
       ev.preventDefault()
       this.props.onSubmit(messager, message)
     }
+  }
+
+  componentWillUnmount(){
+    this.props.onUnload()
   }
 
   render(){

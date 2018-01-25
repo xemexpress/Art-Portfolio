@@ -24,6 +24,8 @@ export default (state=defaultState, action) => {
         }
       }
       break
+    case 'ABOUT_PAGE_UNLOADED':
+      return defaultState
     default:
   }
   
