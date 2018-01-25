@@ -54,6 +54,7 @@ router.put('/:collection', auth.required, function(req, res, next){
 
     if(typeof req.body.collection.title !== 'undefined'){
       req.collection.title = req.body.collection.title
+      req.collection.slugify()
     }
 
     req.collection.save().then(function(collection){
@@ -117,6 +118,30 @@ router.get('/:collection/units', auth.optional, function(req, res, next){
       unitsCount: unitsCount
     })
   }).catch(next)
+})
+
+// Update Unit
+router.put('/:collection/units/:unit', auth.required, function(req, res, next){
+  User.findById(req.payload.id).then(function(user){
+    if(!user){ return res.sendStatus(401) }
+
+    if(typeof req.body.unit.pos !== 'undefined'){
+      req.unit.pos = req.body.unit.pos
+    }
+
+    if(typeof req.body.unit.image !== 'undefined'){
+      req.unit.image = req.body.unit.image
+    }
+
+    if(typeof req.body.unit.text !== 'undefined'){
+      req.unit.text = req.body.unit.text
+    }
+
+    req.unit.save().then(function(unit){
+      return res.json({ unit: unit.toJSONFor() })
+    }).catch(next)
+
+  })
 })
 
 // Delete Unit
