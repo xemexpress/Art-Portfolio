@@ -1,6 +1,6 @@
 /* Calibration purpose */
 /* html { 
-  background: url('calibAbout.jpg') no-repeat center center fixed; 
+  background: url('calibSubNav.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,23 +85,23 @@ body {
   cursor: default;
 }
 
-.category li {
+.category > ul > li {
   display: inline-block;
   color: #B9B9B9;
-  letter-spacing: 0.7px;
-  margin-bottom: 14.8px;
+  letter-spacing: 1px;
+  margin-bottom: 14.4px;
   padding-right: 0.9em;
-  border-bottom: 1px solid #B9B9B9;
+  border-bottom: 0.1px solid #B9B9B9;
   cursor: default;
 }
 
-.category li a {
+.category > ul > li a {
   cursor: pointer;
 }
 
-.category li:hover {
+.category > ul > li:hover {
   color: #000;
-  border-bottom: 1px solid #000;
+  border-bottom: 0.1px solid #000;
 }
 
 /* Crafts dropdown control */
@@ -144,22 +144,18 @@ body {
 .design {
   visibility: hidden;
   position: absolute;
-  top: 2px;
-  left: 84px;
+  top: 1px;
+  left: 83px;
   list-style: none;
-  font-size: 0.8em;
+  font-size: 0.84em;
+}
+
+.design > li {
+  padding-bottom: 1px;
 }
 
 /* Design sub-dropdown control */
 /* Book design */
-.book-design .nav-hand {
-  background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.3%;
-  height: 40%;
-  position: fixed;
-  top: 336px;
-  right: 138px;
-}
 
 .sub-category:hover .book-design {
   visibility: visible;
@@ -168,22 +164,21 @@ body {
 .book-design {
   visibility: hidden;
   position: absolute;
-  top: 2px;
-  left: 110px;
-  list-style: none;
-  font-size: 0.9em;
+  top: 12px;
+  left: 40px;
+  border: 0.1px solid #000;
+  background: #FFF;
+  padding: 16px 10px 2px 24px;
+  margin-right: 3px;
+  list-style: square;
+  font-size: 1em;
+}
+
+.book-design li {
+  margin-bottom: 13.5px;
 }
 
 /* Brand design */
-.brand-design .nav-hand {
-  background: transparent url("./svg/nav-hand.svg") no-repeat;
-  width: 2.3%;
-  height: 40%;
-  position: fixed;
-  top: 365px;
-  right: 138px;
-}
-
 .sub-category:hover .brand-design {
   visibility: visible;
 }
@@ -191,10 +186,18 @@ body {
 .brand-design {
   visibility: hidden;
   position: absolute;
-  top: 31px;
-  left: 110px;
-  list-style: none;
-  font-size: 0.9em;
+  top: 41px;
+  left: 40px;
+  border: 0.1px solid #000;
+  background: #FFF;
+  padding: 16px 0px 2px 24px;
+  margin-right: 3px;
+  list-style: square;
+  font-size: 1em;
+}
+
+.brand-design li {
+  margin-bottom: 13.5px;
 }
 
 /* Blog Component */

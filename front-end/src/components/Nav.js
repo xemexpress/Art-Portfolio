@@ -24,11 +24,11 @@ class Nav extends React.Component {
               <span className='crafts-drop'>Crafts</span>
               <ul className='crafts'>
                 <span className='nav-hand'></span>
-                <li><Link to='gallery/jewlery-practice' className='link'>Jewlery&nbsp;practice</Link></li>
-                <li><Link to='gallery/light-up-silver-jewelry' className='link'>Light&nbsp;up&nbsp;silver&nbsp;jewelry</Link></li>
-                <li><Link to='gallery/origami-jewelry-series' className='link'>Origami&nbsp;jewelry&nbsp;series</Link></li>
-                <li><Link to='gallery/shell-small-object' className='link'>Shell&nbsp;small&nbsp;object</Link></li>
-                <li><Link to='gallery/weave-jewelry' className='link'>Weave&nbsp;jewelry</Link></li>
+                <li><Link to='gallery/jewlery-practice' className='link'>Jewlery&nbsp;Practice</Link></li>
+                <li><Link to='gallery/light-up-silver-jewelry' className='link'>Light&nbsp;Up&nbsp;Silver&nbsp;Jewelry</Link></li>
+                <li><Link to='gallery/origami-jewelry-series' className='link'>Origami&nbsp;Jewelry&nbsp;Series</Link></li>
+                <li><Link to='gallery/shell-small-object' className='link'>Shell&nbsp;Small&nbsp;Object</Link></li>
+                <li><Link to='gallery/weave-jewelry' className='link'>Weave&nbsp;Jewelry</Link></li>
               </ul>
             </li>
             <li className='category'>
@@ -36,28 +36,27 @@ class Nav extends React.Component {
               <ul className='design'>
                 <span className='nav-hand'></span>
                 <li className='sub-category'>
-                  <span className='book-design-drop'>Book&nbsp;design</span>
+                  <span className='book-design-drop'>Book</span>
                   <ul className='book-design'>
                     <span className='nav-hand'></span>
-                    <li><Link to='gallery/ancestral-house' className='link'>Ancestral&nbsp;house</Link></li>
-                    <li><Link to='gallery/artist-book' className='link'>Artist&nbsp;book</Link></li>
-                    <li><Link to='gallery/future-calendar' className='link'>Future&nbsp;calendar</Link></li>
+                    <li><Link to='gallery/ancestral-house' className='link'>Ancestral&nbsp;House</Link></li>
+                    <li><Link to='gallery/artist-book' className='link'>Artist&nbsp;Book</Link></li>
+                    <li><Link to='gallery/future-calendar' className='link'>Future&nbsp;Calendar</Link></li>
                   </ul>
-                </li>
+                </li><br/>
                 <li className='sub-category'>
-                <span className='brand-design-drop'>Brand&nbsp;design</span>
+                  <span className='brand-design-drop'>Brand</span>
                   <ul className='brand-design'>
-                    <span className='nav-hand'></span>
-                    <li><Link to='gallery/herbal-day' className='link'>Herbal&nbsp;day</Link></li>
+                    <li><Link to='gallery/herbal-day' className='link'>Herbal&nbsp;Day</Link></li>
                     <li><Link to='gallery/mindtree' className='link'>Mindtree</Link></li>
                     <li><Link to='gallery/sound' className='link'>Sound</Link></li>
                     <li><Link to='gallery/stationary' className='link'>Stationary</Link></li>
-                    <li><Link to='gallery/tongxianghui' className='link'>Tongxianghui</Link></li>
+                    <li><Link to='gallery/tongxianghui' className='link'>Tong&nbsp;Xiang Association</Link></li>
                   </ul>
                 </li>
-                <li><Link to='gallery/graphic-sketch' className='link'>Graphic&nbsp;&amp;&nbsp;sketch</Link></li>
-                <li><Link to='gallery/icon-design' className='link'>Icon&nbsp;design</Link></li>
-                <li><Link to='gallery/ui-design' className='link'>UI&nbsp;design</Link></li>
+                <li><Link to='gallery/graphic-sketch' className='link'>Graphic&nbsp;&amp;&nbsp;Sketch</Link></li>
+                <li><Link to='gallery/icon-design' className='link'>Icon</Link></li><br/>
+                <li><Link to='gallery/ui-design' className='link'>UI</Link></li><br/>
                 <li><Link to='gallery/others' className='link'>Others</Link></li>
               </ul>
             </li>
