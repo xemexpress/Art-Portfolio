@@ -9,6 +9,8 @@ var fs = require('fs'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
+var secret = require('./config').secret
+
 var isProduction = process.env.NODE_ENV === 'production'
 
 var app = express();
@@ -22,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('method-override')());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({ secret: 'art-portfolio', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
+app.use(session({ secret: secret, cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
 if(!isProduction){
   app.use(errorhandler());
