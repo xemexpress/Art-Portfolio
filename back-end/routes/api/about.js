@@ -1,6 +1,8 @@
 var router = require('express').Router()
 var nodemailer = require('nodemailer')
+
 var auth = require('../auth')
+var mailer = require('../../config').mailer
 
 router.post('/', auth.optional, function(req, res, next){
   console.log(req.body)
@@ -16,17 +18,17 @@ router.post('/', auth.optional, function(req, res, next){
     service: 'gmail',
     auth: {
       type: 'OAuth2',
-      user: 'theartistserver@gmail.com',
-      clientId: '920036113165-c1tt6u0p11v6cei4qv0t3enihkkvhn54.apps.googleusercontent.com',
-      clientSecret: 'nN7gCJhkDsKwY2gjKChYG5Yd',
-      refreshToken: '1/dUIC0NQmrNtYF5zfLY8m2Nh6wd-9622DW8XOh9RxZQk',
-      accessToken: 'ya29.GltNBZVkges1TP3MJQEMw5NdG3epoSGVq1n-BgUqbRX5Qx1lkPuL1Ygi6aNUOIgI1tXeltv4HnBBJ7C7UsXuHV-rHK8Eu5tS-Rv58o7gP0D4ifMHqm_PAUQ0-vsN'
+      user: mailer.server_user,
+      clientId: mailer.clientId,
+      clientSecret: mailer.clientSecret,
+      refreshToken: mailer.refreshToken,
+      accessToken: mailer.accessToken
     }
   })
 
   let mailOptions = {
-    from: `${req.body.mail.messager} <theartistserver@gmail.com>`,
-    to: 'theartistserver@gmail.com',
+    from: `${req.body.mail.messager} <${mailer.server_user}>`,
+    to: mailer.receiver_user,
     subject: 'Message for the Artist',
     html: `
       <!doctype html>
