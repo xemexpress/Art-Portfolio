@@ -12,12 +12,19 @@ const mapDispatchToProps = dispatch => ({
   onLoad: payload => dispatch({
     type: 'BLOG_PAGE_LOADED',
     payload
+  }),
+  onUnload: () => dispatch({
+    type: 'BLOG_PAGE_UNLOADED'
   })
 })
 
 class Blog extends React.Component {
   componentWillMount(){
     this.props.onLoad(agent.Articles.all())
+  }
+
+  componentWillUnmount(){
+    this.props.onUnload()
   }
 
   render(){
