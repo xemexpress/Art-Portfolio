@@ -1,9 +1,12 @@
 import superagentPromise from 'superagent-promise'
 import _superagent from 'superagent'
 
-var superagent = superagentPromise(_superagent, global.Promise)
+import {
+  API_ROOT,
+  PER_PAGE
+} from './constants'
 
-const API_ROOT = 'http://localhost:3000/api'
+var superagent = superagentPromise(_superagent, global.Promise)
 
 const responseBody = res => res.body
 
@@ -18,7 +21,7 @@ const limit = (count, p) => `limit=${count}&offset=${p ? p * count : 0}`
 
 const Articles = {
   all: page =>
-    requests.get(`/articles?${limit(1, page)}`)
+    requests.get(`/articles?${limit(PER_PAGE, page)}`)
 }
 
 const Units = {
