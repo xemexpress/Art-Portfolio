@@ -12,8 +12,7 @@ var UnitSchema = new mongoose.Schema({
     required: [true, 'let people see your work :)']
   },
   text: {
-    type: String,
-    required: [true, 'let people understand your work :)']
+    type: String
   },
   fromCollection: {
     type: mongoose.Schema.Types.ObjectId,
