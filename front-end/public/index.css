@@ -1,11 +1,11 @@
 /* Calibration purpose */
-html { 
-  background: url('calibGallerydddd.png') no-repeat center center fixed; 
+/* html { 
+  background: url('calibGallery.png') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 body {
   margin: 0;
@@ -245,21 +245,22 @@ body {
 .image-gallery-custom-left-nav {
   position: absolute;
   top: 50%;
-  margin-left: -4em;
+  margin-left: -3.5em;
   border: none;
+  height: 3.1em;
+  width: 3.1em;
   background: transparent url("./svg/previous.svg") no-repeat;
-  height: 3em;
-  width: 3em;
 }
 
 .image-gallery-custom-right-nav {
-  /* position: absolute;
+  position: absolute;
   top: 50%;
-  margin-right: -4em;
+  right: 0;
+  margin-right: -5.1em;
   border: none;
+  height: 3.1em;
+  width: 3.1em;
   background: transparent url("./svg/next.svg") no-repeat;
-  height: 3em;
-  width: 3em; */
 }
 
 .description {
