@@ -8,7 +8,9 @@ import './Gallery.css'
 
 const mapStateToProps = state => ({
   artist: state.common.artist,
-  units: state.gallery.units
+  items: state.gallery.items,
+  descriptions: state.gallery.descriptions,
+  max_index: state.gallery.max_index
 })
 
 const mapDispatchToProps = dispatch => ({
@@ -22,6 +24,13 @@ const mapDispatchToProps = dispatch => ({
 })
 
 class Gallery extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      index: 0
+    }
+  }
+
   componentWillMount(){
     this.props.onLoad(agent.Units.fromCollection(this.props.params.slug))
   }
@@ -32,38 +41,55 @@ class Gallery extends React.Component {
   
   // Customize ImageGallery
   _renderLeftNav(onClick, disabled) {
+    const previous = () => {
+      if(this.state.index === 0){
+        this.setState({
+          index: this.props.max_index
+        })
+      }else{
+        this.setState({
+          index: this.state.index - 1
+        })
+      }
+      onClick()
+    }
+
     return (
       <button
         className='image-gallery-custom-left-nav'
         disabled={disabled}
-        onClick={onClick} />
+        onClick={previous} />
     )
   }
 
   _renderRightNav(onClick, disabled) {
+    const next = () => {
+      if(this.state.index === this.props.max_index){
+        this.setState({
+          index: 0
+        })
+      }else{
+        this.setState({
+          index: this.state.index + 1
+        })
+      }
+      onClick()
+    }
+    
     return (
       <button
         className='image-gallery-custom-right-nav'
         disabled={disabled}
-        onClick={onClick}/>
+        onClick={next}/>
     )
   }
 
   render(){
-    if(this.props.units){
-      let items = [], descriptions = []
-      this.props.units.forEach(unit => {
-        items.push({
-          original: unit.image,
-          originalAlt: `Pos at ${unit.pos}`
-        })
-        descriptions.push(unit.text)
-      })
-      console.log(items, descriptions)
+    if(this.props.items){
       return (
         <div className='gallery'>
           <ImageGallery
-            items={items}
+            items={this.props.items}
             showThumbnails={false}
             showFullscreenButton={false}
             showPlayButton={false}
@@ -71,7 +97,8 @@ class Gallery extends React.Component {
             renderRightNav={this._renderRightNav.bind(this)} />
           <Description
             artist={this.props.artist}
-            descriptions={descriptions} />
+            descriptions={this.props.descriptions}
+            index={this.state.index} />
         </div>
       )
     }
