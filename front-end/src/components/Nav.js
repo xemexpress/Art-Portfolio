@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import ListPagination from './ListPagination';
 
 class Nav extends React.Component {
   render(){
@@ -68,6 +69,14 @@ class Nav extends React.Component {
           </ul>
           <div className='nav-deco'>
           </div>
+          {
+          this.props.showBlogPagination ?
+          <ListPagination
+            articlesCount={this.props.articlesCount}
+            currentPage={this.props.currentPage}
+            onSetPage={this.props.onSetPage} />
+          : <h1>No Pag!</h1>
+          }
         </div>
       </div>
     )
