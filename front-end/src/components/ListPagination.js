@@ -1,7 +1,10 @@
 import React from 'react'
 
+import {
+  PER_PAGE
+} from '../constants'
+
 const ListPagination = props => {
-  const PER_PAGE = 1
   if(props.articlesCount <= PER_PAGE){
     return null
   }
@@ -11,10 +14,28 @@ const ListPagination = props => {
     range.push(i)
   }
 
+  const previousPage = ev => {
+    ev.preventDefault()
+    props.onSetPage(props.currentPage - 1)
+  }
+
+  const nextPage = ev => {
+    ev.preventDefault()
+    props.onSetPage(props.currentPage + 1)
+  }
+
   return (
     <nav>
       <ul className='pagination'>
-      &#60;
+        {
+          props.currentPage !== 0 ?
+          <span
+            className='getPointer'
+            onClick={previousPage}>
+            &#60;
+          </span>
+          : <span>&#60;</span>
+        }
         {
           range.map(n => {
             const isCurrent = n === props.currentPage
@@ -32,7 +53,15 @@ const ListPagination = props => {
             )
           })
         }
-      &#62;
+        {
+          props.currentPage !== range[range.length - 1] ?
+          <span
+            className='getPointer'
+            onClick={nextPage}>
+            &#62;
+          </span>
+          : <span>&#62;</span>
+        }
       </ul>
     </nav>
   )

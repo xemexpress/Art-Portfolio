@@ -239,6 +239,7 @@ body {
   font-size: 77%;
   padding-left: 0;
   list-style: none;
+  cursor: default;
 }
 
 .page-item {
@@ -246,11 +247,11 @@ body {
   display: inline;
 }
 
-.page-item:first-child {
+.page-item:nth-child(2) {
   margin-left: 11px;
 }
 
-.page-item:last-child {
+.page-item:nth-last-child(2) {
   margin-right: 11px;
 }
 
@@ -260,6 +261,10 @@ body {
 
 .page-link {
   padding: 0 2px;
+  cursor: pointer;
+}
+
+.getPointer {
   cursor: pointer;
 }
 

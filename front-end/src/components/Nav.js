@@ -75,7 +75,7 @@ class Nav extends React.Component {
             articlesCount={this.props.articlesCount}
             currentPage={this.props.currentPage}
             onSetPage={this.props.onSetPage} />
-          : <h1>No Pag!</h1>
+          : null
           }
         </div>
       </div>
