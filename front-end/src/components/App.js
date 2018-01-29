@@ -3,16 +3,25 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Nav from './Nav'
+import agent from '../agent'
 
 const mapStateToProps = state => ({
   header: state.common.header,
   concentration: state.common.concentration,
-  redirectTo: state.common.redirectTo
+  redirectTo: state.common.redirectTo,
+  showBlogPagination: state.blog.showBlogPagination,
+  articlesCount: state.blog.articlesCount,
+  currentPage: state.blog.currentPage
 })
 
 const mapDispatchToProps = dispatch => ({
   onRedirect: () => dispatch({
     type: 'REDIRECT'
+  }),
+  onSetPage: p => dispatch({
+    type: 'SET_PAGE',
+    page: p,
+    payload: agent.Articles.all(p)
   })
 })
 
@@ -33,7 +42,11 @@ class App extends React.Component {
           </div>
           <Nav
             header={this.props.header}
-            concentration={this.props.concentration} />
+            concentration={this.props.concentration}
+            showBlogPagination={this.props.showBlogPagination}
+            onSetPage={this.props.onSetPage}
+            currentPage={this.props.currentPage}
+            articlesCount={this.props.articlesCount} />
         </div>
       </div>
     );

@@ -14,9 +14,11 @@ const requests = {
     superagent.post(`${API_ROOT}${url}`, body).then(responseBody)
 }
 
+const limit = (count, p) => `limit=${count}&offset=${p ? p * count : 0}`
+
 const Articles = {
   all: page =>
-    requests.get(`/articles?limit=10`)
+    requests.get(`/articles?${limit(1, page)}`)
 }
 
 const Units = {

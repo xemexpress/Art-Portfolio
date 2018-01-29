@@ -1,7 +1,6 @@
 export default (state={}, action) => {
   switch(action.type){
     case 'GALLERY_PAGE_LOADED':
-      console.log(action.payload.units)
       var items = [], descriptions = []
       action.payload.units.forEach(unit => {
         items.push({

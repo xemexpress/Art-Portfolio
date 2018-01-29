@@ -3,8 +3,20 @@ export default (state = {}, action) => {
     case 'BLOG_PAGE_LOADED': 
       return { 
         ...state, 
-        articles: action.payload.articles 
-      } 
+        articles: action.payload.articles,
+        articlesCount: action.payload.articlesCount,
+        showBlogPagination: true,
+        currentPage: 0
+      }
+    case 'SET_PAGE':
+      return {
+        ...state,
+        articles: action.payload.articles,
+        articlesCount: action.payload.articlesCount,
+        currentPage: action.page
+      }
+    case 'BLOG_PAGE_UNLOADED':
+      return {}
     default: 
   } 
   
