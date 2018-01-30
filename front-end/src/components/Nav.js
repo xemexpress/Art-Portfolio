@@ -55,8 +55,8 @@ const Nav = props => {
                 </ul>
               </li>
               <li><Link to='gallery/graphic-and-sketch' className='link'>Graphic&nbsp;&amp;&nbsp;Sketch</Link></li>
-              <li><Link to='gallery/icon-design' className='link'>Icon</Link></li><br/>
-              <li><Link to='gallery/ui-design' className='link'>UI</Link></li><br/>
+              <li><Link to='gallery/icon' className='link'>Icon</Link></li><br/>
+              <li><Link to='gallery/ui' className='link'>UI</Link></li><br/>
               <li><Link to='gallery/others' className='link'>Others</Link></li>
             </ul>
           </li>
