@@ -1,6 +1,6 @@
 /* Calibration purpose */
 /* html { 
-  background: url('calibNav.jpg') no-repeat center center fixed; 
+  background: url('calibBlog.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,8 +36,23 @@ body {
 /* Nav Component */
 .nav {
   position: relative !important;
-  left: 52px;
   top: 177px;
+}
+@media (min-width: 544px) {
+  .nav {
+    left: 7px; }
+}
+@media (min-width: 768px) {
+  .nav {
+    left: 10px; }
+}
+@media (min-width: 992px) {
+  .nav {
+    left: 32px; }
+}
+@media (min-width: 1200px) {
+  .nav {
+    left: 52px; }
 }
 
 .artist-name {
@@ -207,7 +222,14 @@ body {
 
 .blog-unit {
   margin: 176px auto -139px;
-  width: 51.4%;
+}
+@media (min-width: 544px) {
+  .blog-unit {
+    width: 81.4%; }
+}
+@media (min-width: 992px) {
+  .blog-unit {
+    width: 51.4%; }
 }
 
 .blog img {

@@ -5,7 +5,7 @@ import ListPagination from './ListPagination';
 
 const Nav = props => {
   return (
-    <div className='col-lg-2 col-md-3 col-sm-2'>
+    <div className='col-xl-3 col-lg-4 col-md-4 col-sm-3'>
       <div className='nav'>
         <Link to='/' className='link'>
           <div className='artist-name'>
