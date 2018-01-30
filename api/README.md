@@ -327,7 +327,7 @@ Example request body:
 
 Authentication required, returns the [Unit](#single-unit)
 
-Required fields: `pos`, `image`, `text`
+Required fields: `pos` (comp `collection.slug`-`order_code`), `image`
 
 ### Update Unit
 
