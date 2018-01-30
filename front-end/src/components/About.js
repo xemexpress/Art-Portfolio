@@ -53,7 +53,7 @@ class About extends React.Component {
           <div className='about offset-lg-3 col-lg-6 offset-xs-2 col-xs-10'>
             <div className='row'>
               <div className='col-lg-1 col-md-1'>
-                <a href='https://www.instagram.com/kate.redtea.cake/' target='blank'><img src='http://res.cloudinary.com/unimemo-dfd94/image/upload/v1516694472/instalgram_h69qvh.svg' width='46' height='46' alt='instalgram-icon'/></a>
+                <a href='https://www.instagram.com/kate.redtea.cake/' target='blank'><img src='https://res.cloudinary.com/unimemo-dfd94/image/upload/v1516694472/test/instalgram_h69qvh.svg' width='46' height='46' alt='instagram-icon'/></a>
               </div>
               <div className='col-lg-9 col-md-9 welcome'>
                 Follow me on Instalgram<br/>
