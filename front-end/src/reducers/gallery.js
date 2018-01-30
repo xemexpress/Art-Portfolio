@@ -7,7 +7,7 @@ export default (state={}, action) => {
   switch(action.type){
     case GALLERY_PAGE_LOADED:
       var items = null, descriptions = null
-      if(action.payload){
+      if(action.payload && action.payload.units && action.payload.units.length !== 0){
         items = []
         descriptions = []
         action.payload.units.forEach(unit => {
