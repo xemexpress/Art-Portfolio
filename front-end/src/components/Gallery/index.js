@@ -113,7 +113,7 @@ class Gallery extends React.Component {
         </div>
       )
     }
-    return <h2>&nbsp;&nbsp;&nbsp;&nbsp;No images in this collection <i>"{this.props.params.slug}"</i> ...yet</h2>
+    return <div>&nbsp;&nbsp;&nbsp;&nbsp;No images in this collection <i>"{this.props.params.slug}"</i> ...yet</div>
   }
 }
 
