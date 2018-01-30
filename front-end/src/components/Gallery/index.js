@@ -39,6 +39,12 @@ class Gallery extends React.Component {
     this.props.onUnload()
   }
   
+  componentWillUpdate(nextProps, nextState){
+    if(nextProps.params.slug !== this.props.params.slug){
+      this.props.onLoad(agent.Units.fromCollection(nextProps.params.slug))
+    }
+  }
+
   // Customize ImageGallery
   _renderLeftNav(onClick, disabled) {
     const previous = () => {
@@ -85,7 +91,7 @@ class Gallery extends React.Component {
   }
 
   render(){
-    if(this.props.items){
+    if(this.props.items !== null){
       return (
         <div className='gallery'>
           <ImageGallery
@@ -102,7 +108,7 @@ class Gallery extends React.Component {
         </div>
       )
     }
-    return <h1>Nothing</h1>
+    return <h2>&nbsp;&nbsp;&nbsp;&nbsp;No images in this collection <i>"{this.props.params.slug}"</i> ...yet</h2>
   }
 }
 
