@@ -4,6 +4,11 @@ import { connect } from 'react-redux'
 import Article from './Article'
 import agent from '../../agent'
 
+import {
+  BLOG_PAGE_LOADED,
+  BLOG_PAGE_UNLOADED
+} from '../../constants'
+
 const mapStateToProps = state => ({
   articles: state.blog.articles,
   articlesCount: state.blog.articlesCount
@@ -11,11 +16,11 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onLoad: payload => dispatch({
-    type: 'BLOG_PAGE_LOADED',
+    type: BLOG_PAGE_LOADED,
     payload
   }),
   onUnload: () => dispatch({
-    type: 'BLOG_PAGE_UNLOADED'
+    type: BLOG_PAGE_UNLOADED
   })
 })
 

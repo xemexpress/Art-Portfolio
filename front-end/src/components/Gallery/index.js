@@ -6,6 +6,11 @@ import Description from './Description'
 import agent from '../../agent'
 import './Gallery.css'
 
+import {
+  GALLERY_PAGE_LOADED,
+  GALLERY_PAGE_UNLOADED
+} from '../../constants'
+
 const mapStateToProps = state => ({
   artist: state.common.artist,
   items: state.gallery.items,
@@ -15,11 +20,11 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onLoad: payload => dispatch({
-    type: 'GALLERY_PAGE_LOADED',
+    type: GALLERY_PAGE_LOADED,
     payload
   }),
   onUnload: () => dispatch({
-    type: 'GALLERY_PAGE_UNLOADED'
+    type: GALLERY_PAGE_UNLOADED
   })
 })
 

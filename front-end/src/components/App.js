@@ -5,6 +5,11 @@ import { connect } from 'react-redux'
 import Nav from './Nav'
 import agent from '../agent'
 
+import {
+  REDIRECT,
+  SET_PAGE
+} from '../constants'
+
 const mapStateToProps = state => ({
   header: state.common.header,
   concentration: state.common.concentration,
@@ -16,10 +21,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onRedirect: () => dispatch({
-    type: 'REDIRECT'
+    type: REDIRECT
   }),
   onSetPage: p => dispatch({
-    type: 'SET_PAGE',
+    type: SET_PAGE,
     page: p,
     payload: agent.Articles.all(p)
   })

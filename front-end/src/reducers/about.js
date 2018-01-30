@@ -1,7 +1,8 @@
 import {
   UPDATE_FIELD_ABOUT,
   SEND_MAIL,
-  ASYNC_START
+  ASYNC_START,
+  ABOUT_PAGE_UNLOADED
 } from '../constants'
 
 const defaultState = {
@@ -30,7 +31,7 @@ export default (state=defaultState, action) => {
         }
       }
       break
-    case 'ABOUT_PAGE_UNLOADED':
+    case ABOUT_PAGE_UNLOADED:
       return defaultState
     default:
   }

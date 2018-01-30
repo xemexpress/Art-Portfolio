@@ -4,20 +4,26 @@ import { connect } from 'react-redux'
 import ListErrors from './ListErrors'
 import agent from '../agent'
 
+import {
+  UPDATE_FIELD_ABOUT,
+  SEND_MAIL,
+  ABOUT_PAGE_UNLOADED
+} from '../constants'
+
 const mapStateToProps = state => ({ ...state.about })
 
 const mapDispatchToProps = dispatch => ({
   onUpdateField: (key, value) => dispatch({
-    type: 'UPDATE_FIELD_ABOUT',
+    type: UPDATE_FIELD_ABOUT,
     key,
     value
   }),
   onSubmit: (messager, message) => dispatch({
-    type: 'SEND_MAIL',
+    type: SEND_MAIL,
     payload: agent.Message.send(messager, message)
   }),
   onUnload: () => dispatch({
-    type: 'ABOUT_PAGE_UNLOADED'
+    type: ABOUT_PAGE_UNLOADED
   })
 })
 
