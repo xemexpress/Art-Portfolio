@@ -47,6 +47,7 @@ class Gallery extends React.Component {
   componentWillUpdate(nextProps, nextState){
     if(nextProps.params.slug !== this.props.params.slug){
       this.props.onLoad(agent.Units.fromCollection(nextProps.params.slug))
+      this.setState({ index: 0 })
     }
   }
 
