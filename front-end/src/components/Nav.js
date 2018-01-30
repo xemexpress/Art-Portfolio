@@ -5,7 +5,7 @@ import ListPagination from './ListPagination';
 
 const Nav = props => {
   return (
-    <div className='col-lg-4 col-md-5'>
+    <div className='col-lg-2 col-md-3 col-sm-2'>
       <div className='nav'>
         <Link to='/' className='link'>
           <div className='artist-name'>
@@ -24,7 +24,7 @@ const Nav = props => {
           <li className='category'>
             <span className='crafts-drop'>Crafts</span>
             <ul className='crafts'>
-              <span className='nav-hand'></span>
+              <div className='nav-hand'></div>
               <li><Link to='gallery/jewlery-practice' className='link'>Jewlery&nbsp;Practice</Link></li>
               <li><Link to='gallery/light-up-silver-jewelry' className='link'>Light&nbsp;Up&nbsp;Silver&nbsp;Jewelry</Link></li>
               <li><Link to='gallery/origami-jewelry-series' className='link'>Origami&nbsp;Jewelry&nbsp;Series</Link></li>
@@ -33,13 +33,12 @@ const Nav = props => {
             </ul>
           </li>
           <li className='category'>
-            <span className='design-drop'>Design</span>
+            <div className='design-drop'>Design</div>
             <ul className='design'>
-              <span className='nav-hand'></span>
+              <div className='nav-hand'></div>
               <li className='sub-category'>
                 <span className='book-design-drop'>Book</span>
                 <ul className='book-design'>
-                  <span className='nav-hand'></span>
                   <li><Link to='gallery/ancestral-house' className='link'>Ancestral&nbsp;House</Link></li>
                   <li><Link to='gallery/artist-book' className='link'>Artist&nbsp;Book</Link></li>
                   <li><Link to='gallery/future-calendar' className='link'>Future&nbsp;Calendar</Link></li>

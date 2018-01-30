@@ -1,6 +1,6 @@
 /* Calibration purpose */
 /* html { 
-  background: url('calibBlog.jpg') no-repeat center center fixed; 
+  background: url('calibNav.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,8 +35,8 @@ body {
 
 /* Nav Component */
 .nav {
-  position: fixed !important;
-  right: 85.45px;
+  position: relative !important;
+  left: 52px;
   top: 177px;
 }
 
@@ -106,11 +106,11 @@ body {
 /* Crafts dropdown control */
 .crafts .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
-  position: fixed;
-  top: 294px;
-  right: 254px;
-  width: 2.7%;
-  height: 40%;
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  width: 50px;
+  height: 237px;
 }
 
 .category:hover .crafts {
@@ -129,11 +129,11 @@ body {
 /* Design dropdown control */
 .design .nav-hand {
   background: transparent url("./svg/nav-hand.svg") no-repeat;
-  position: fixed;
-  top: 327px;
-  right: 254px;
-  width: 2.7%;
-  height: 40%;
+  position: absolute;
+  top: -11px;
+  left: -10px;
+  width: 50px;
+  height: 237px;
 }
 
 .category:hover .design {

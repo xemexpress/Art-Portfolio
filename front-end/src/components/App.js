@@ -42,7 +42,7 @@ class App extends React.Component {
     return (
       <div className='container-fluid'>
         <div className='row'>
-          <div className='main-view col-lg-8 col-md-7'>
+          <div className='main-view col-lg-8 col-md-7 col-sm-7'>
             {this.props.children}
           </div>
           <Nav
